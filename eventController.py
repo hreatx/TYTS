@@ -1,6 +1,5 @@
 import buddingEmotion
-import databaseMock
-
+import mydata as database
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -8,12 +7,16 @@ class EventController:
     COLLECT_TIME = 3000
     PENDING_MONEY = 10
 
-    def __init__(self, ui):
+    def __init__(self, ui, user):
         self.ui = ui
         self.emotion = buddingEmotion.BuddingEmotion(self)
-        self.database = databaseMock.DatabaseMock()
-        self.userName = "admin"
-        self.money, self.energy, self.level = self.database.load(self.userName)
+        self.user = user
+        print("current user is", self.user)
+        res = database.load(self.user)
+        print(res)
+        self.money = res[1]
+        self.energy = res[2]
+        self.level = res[3]
 
     def collectStart(self):
         print("collect start")
@@ -24,7 +27,9 @@ class EventController:
     def collectFinish(self):
         print("collect finish")
         self.ui.disableCollect(self.money)
+
         self.emotion.stopRecog()
+        database.save(self.user, self.money, self.energy, self.level)
 
     def onSuccessEvent(self):
         self.money += self.PENDING_MONEY

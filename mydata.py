@@ -148,6 +148,9 @@ def login(account,pwd):
     """, t)
     info = c.fetchone()
     c.close()
+    if info is None:
+        return False
+
     if info[0] == pwd:
         return True
     else:

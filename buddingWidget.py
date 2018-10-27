@@ -7,7 +7,6 @@ from PyQt5.QtGui import *
 
 dir = os.path.dirname(os.path.abspath(__file__))
 
-
 class BuddingWidget(QWidget):
 
     def __init__(self, parent):

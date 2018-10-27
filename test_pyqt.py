@@ -44,7 +44,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 		QtWidgets.QMessageBox.information(self, "cong", "username: %s\npassword: %s\ncreated!" % (self.user, self.pwd))
 
 	def change_clicked(self):
-		self.other = BuddingWindow()
+		self.other = BuddingWindow(self.user)
 		self.other.user = self.user
 		self.other.other = self
 		self.close()
@@ -65,10 +65,10 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 		self.ui.change.clicked.connect(self.change_clicked)
 
 class BuddingWindow(QtWidgets.QMainWindow):
-	def __init__(self, parent=None):
+	def __init__(self, user, parent=None):
 		self.val = 0
 		super(BuddingWindow, self).__init__(parent)
-		self.ui = BuddingMainWindow()
+		self.ui = BuddingMainWindow(user)
 		self.other = None
 		self.ui.setupUi(self)
 		# self.ui.pushButton.clicked.connect(self.updateDirectMoney)

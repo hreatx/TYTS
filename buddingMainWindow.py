@@ -7,16 +7,14 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QObject, pyqtSlot
 import buddingWidget
 import eventController
 import collectButton
 
 
 class BuddingMainWindow(object):
-    def __init__(self):
-        self.controller = eventController.EventController(self)
-        self.val = 0
+    def __init__(self, user):
+        self.controller = eventController.EventController(self, user)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -145,7 +143,7 @@ class BuddingMainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Smile Budding!"))
-        self.money.setText(_translate("MainWindow", "$ 100"))
+        self.updateMoney(self.controller.money)
         self.energy.setText(_translate("MainWindow", "Energy"))
         self.level.setText(_translate("MainWindow", "Level"))
         self.voiceButton.setText(_translate("MainWindow", "voice"))
