@@ -13,6 +13,7 @@ install:
   - pip install opencv-python
   - pip install requests
   - pip install pyinstaller
+  - pip install --upgrade setuptools
 
 script:
  - pyinstaller main.py
