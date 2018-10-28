@@ -1,9 +1,0 @@
-repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v1.2.3
-    hooks:
-    -   id: pylint
-	name: pylint
-	entry: python -m pylint._main_
-	language: system
-	types: [python]
