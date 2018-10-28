@@ -16,3 +16,4 @@ install:
 
 script:
  - pyuic5 mainwindow.ui -o login_window.py
+ - pyinstaller test_pyqt.py
