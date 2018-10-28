@@ -15,4 +15,4 @@ install:
   - pip install pyinstaller
 
 script:
-  - pyinstaller main.py
+ - pyuic5 mainwindow.ui -o login_window.py
