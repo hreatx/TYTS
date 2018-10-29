@@ -1,7 +1,8 @@
-import unittest
 import sys
-sys.path.append('../')
+import unittest
+
 import buddingWidget
+sys.path.append('../')
 
 
 class BuddingWidgetMock(buddingWidget.BuddingWidget):
@@ -30,7 +31,7 @@ class TestBuddingWidget(unittest.TestCase):
         self.widget.totalMovieSize = 6
         self.widget.currentMovieIndex = 0
 
-        for i in range(6): # if currentMovieIndex == totalMovieSize it should set totalMovieSize to 0
+        for i in range(6):  # if currentMovieIndex == totalMovieSize it should set totalMovieSize to 0
             self.widget.getNextMovie()
 
         print(self.widget.currentMovieIndex)
@@ -39,5 +40,3 @@ class TestBuddingWidget(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
