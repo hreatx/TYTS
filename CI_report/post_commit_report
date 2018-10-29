@@ -1,0 +1,1024 @@
+Travis CI
+There are no broadcasts
+
+Dashboard
+
+Changelog
+
+Documentation
+ Ruolin Jia avatar
+burnmg / TYTS
+ build:failed
+Current
+
+Branches
+
+Build History
+
+Pull Requests
+
+Build #13
+ More options
+ master unit test
+ Commit 38e45b1
+ Compare f518a68..38e45b1
+ Branch master
+ Ruolin Jia avatar Ruolin Jia
+
+ #13 failed
+ Ran for 1 min 23 sec
+ less than a minute ago
+ Restart build
+ Python: 3.6
+Job log
+
+View config
+  Remove log  Raw log
+worker_info
+Worker information
+hostname: b8165c3e-2ae6-4eee-9c89-97f7d439a544@1.production-2-worker-org-gce-xg23
+version: v4.5.2 https://github.com/travis-ci/worker/tree/0e6ddd94961e79b28a19978d99b94505a35bb9db
+instance: travis-job-70c90c83-4a80-4f83-ac2c-55f9b4892405 travis-ci-garnet-trusty-1512502259-986baf0 (via amqp)
+startup: 10.563673812s
+check version
+0.4.6
+shfmt version
+v2.0.0
+ccache version
+ccache version 3.1.9
+Copyright (C) 2002-2007 Andrew Tridgell
+Copyright (C) 2009-2011 Joel Rosdahl
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 3 of the License, or (at your option) any later
+version.
+cmake version
+cmake version 3.9.2
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+heroku version
+heroku-cli/6.14.39-addc925 (linux-x64) node-v9.2.0
+imagemagick version
+Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org
+md5deep version
+4.2
+mercurial version
+Mercurial Distributed SCM (version 4.2.2)
+(see https://mercurial-scm.org for more information)
+Copyright (C) 2005-2017 Matt Mackall and others
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+openssl version
+OpenSSL 1.0.1f 6 Jan 2014
+packer version
+Packer v1.0.2
+Your version of Packer is out of date! The latest version
+is 1.1.2. You can update by downloading from www.packer.io
+postgresql client version
+psql (PostgreSQL) 9.6.6
+ragel version
+Ragel State Machine Compiler version 6.8 Feb 2013
+Copyright (c) 2001-2009 by Adrian Thurston
+subversion version
+svn, version 1.8.8 (r1568071)
+   compiled Aug 10 2017, 17:20:39 on x86_64-pc-linux-gnu
+Copyright (C) 2013 The Apache Software Foundation.
+This software consists of contributions made by many people;
+see the NOTICE file for more information.
+Subversion is open source software, see http://subversion.apache.org/
+The following repository access (RA) modules are available:
+* ra_svn : Module for accessing a repository using the svn network protocol.
+  - with Cyrus SASL authentication
+  - handles 'svn' scheme
+* ra_local : Module for accessing a repository on local disk.
+  - handles 'file' scheme
+* ra_serf : Module for accessing a repository via WebDAV protocol using serf.
+  - using serf 1.3.3
+  - handles 'http' scheme
+  - handles 'https' scheme
+sudo version
+Sudo version 1.8.9p5
+Configure options: --prefix=/usr -v --with-all-insults --with-pam --with-fqdn --with-logging=syslog --with-logfac=authpriv --with-env-editor --with-editor=/usr/bin/editor --with-timeout=15 --with-password-timeout=0 --with-passprompt=[sudo] password for %p:  --without-lecture --with-tty-tickets --disable-root-mailer --enable-admin-flag --with-sendmail=/usr/sbin/sendmail --with-timedir=/var/lib/sudo --mandir=/usr/share/man --libexecdir=/usr/lib/sudo --with-sssd --with-sssd-lib=/usr/lib/x86_64-linux-gnu --with-selinux
+Sudoers policy plugin version 1.8.9p5
+Sudoers file grammar version 43
+Sudoers path: /etc/sudoers
+Authentication methods: 'pam'
+Syslog facility if syslog is being used for logging: authpriv
+Syslog priority to use when user authenticates successfully: notice
+Syslog priority to use when user authenticates unsuccessfully: alert
+Send mail if the user is not in sudoers
+Use a separate timestamp for each user/tty combo
+Lecture user the first time they run sudo
+Root may run sudo
+Allow some information gathering to give useful error messages
+Require fully-qualified hostnames in the sudoers file
+Visudo will honor the EDITOR environment variable
+Set the LOGNAME and USER environment variables
+Length at which to wrap log file lines (0 for no wrap): 80
+Authentication timestamp timeout: 15.0 minutes
+Password prompt timeout: 0.0 minutes
+Number of tries to enter a password: 3
+Umask to use or 0777 to use user's: 022
+Path to mail program: /usr/sbin/sendmail
+Flags for mail program: -t
+Address to send mail to: root
+Subject line for mail messages: *** SECURITY information for %h ***
+Incorrect password message: Sorry, try again.
+Path to authentication timestamp dir: /var/lib/sudo
+Default password prompt: [sudo] password for %p:
+Default user to run commands as: root
+Value to override user's $PATH with: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Path to the editor for use by visudo: /usr/bin/editor
+When to require a password for 'list' pseudocommand: any
+When to require a password for 'verify' pseudocommand: all
+File descriptors >= 3 will be closed before executing a command
+Environment variables to check for sanity:
+	TZ
+	TERM
+	LINGUAS
+	LC_*
+	LANGUAGE
+	LANG
+	COLORTERM
+Environment variables to remove:
+	RUBYOPT
+	RUBYLIB
+	PYTHONUSERBASE
+	PYTHONINSPECT
+	PYTHONPATH
+	PYTHONHOME
+	TMPPREFIX
+	ZDOTDIR
+	READNULLCMD
+	NULLCMD
+	FPATH
+	PERL5DB
+	PERL5OPT
+erm_save
++extra_search    -mouse_jsbterm   -sun_workshop    -xpm
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+  fall-back for $VIM: "/usr/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1
+Linking: gcc   -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed -o vim        -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl    -L/usr/lib/python2.7/config-x86_64-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+iptables version
+iptables v1.4.21
+curl version
+curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
+wget version
+GNU Wget 1.15 built on linux-gnu.
+rsync version
+rsync  version 3.1.0  protocol version 31
+gimme version
+v1.2.0
+nvm version
+0.33.6
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.80
+phpenv version
+rbenv 1.1.1-25-g6aa70b6
+rvm version
+rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+default ruby version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+CouchDB version
+couchdb 1.6.1
+ElasticSearch version
+5.5.0
+Installed Firefox version
+firefox 56.0.2
+MongoDB version
+MongoDB 3.4.10
+34mPhantomJS version
+2.1.1
+Pre-installed PostgreSQL versions
+9.2.24
+9.3.20
+9.4.15
+9.5.10
+9.6.6
+RabbitMQ Version
+3.6.14
+Redis version
+redis-server 4.0.6
+riak version
+2.2.3
+Pre-installed Go versions
+1.7.4
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)
+Maven home: /usr/local/maven-3.5.2
+Java version: 1.8.0_151, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-98-generic", arch: "amd64", family: "unix"
+gradle version
+------------------------------------------------------------
+Gradle 4.0.1
+------------------------------------------------------------
+Build time:   2017-07-07 14:02:41 UTC
+Revision:     38e5dc0f772daecca1d2681885d3d85414eb6826
+Groovy:       2.4.11
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_151 (Oracle Corporation 25.151-b12)
+OS:           Linux 4.4.0-98-generic amd64
+lein version
+Leiningen 2.8.1 on Java 1.8.0_151 Java HotSpot(TM) 64-Bit Server VM
+Pre-installed Node.js versions
+v4.8.6
+v6.12.0
+v6.12.1
+v8.9
+v8.9.1
+phpenv versions
+  system
+  5.6
+* 5.6.32 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.25
+  7.1
+  7.1.11
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.5.2 2017-09-11 16:59:25
+Pre-installed Ruby versions0m
+ruby-2.2.7
+ruby-2.3.4
+ruby-2.4.1
+Setting APT mirror in /etc/apt/sources.list: http://us-east-1.ec2.archive.ubuntu.com/ubuntu/
+git.checkout
+0.80s$ git clone --depth=50 --branch=master https://github.com/burnmg/TYTS.git burnmg/TYTS
+Cloning into 'burnmg/TYTS'...
+remote: Enumerating objects: 153, done.
+remote: Counting objects: 100% (153/153), done.
+remote: Compressing objects: 100% (102/102), done.
+remote: Total 153 (delta 66), reused 135 (delta 48), pack-reused 0
+Receiving objects: 100% (153/153), 919.05 KiB | 3.52 MiB/s, done.
+Resolving deltas: 100% (66/66), done.
+$ cd burnmg/TYTS
+$ git checkout -qf 38e45b19659688b123947beb0afcdbf6137fec04
+0.01s$ source ~/virtualenv/python3.6/bin/activate
+$ python --version
+Python 3.6.3
+$ pip --version
+pip 9.0.1 from /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (python 3.6)
+install.1
+0.68s$ sudo apt-get install xvfb
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+xvfb is already the newest version (2:1.15.1-0ubuntu2.11).
+0 upgraded, 0 newly installed, 0 to remove and 259 not upgraded.
+install.2
+1.58s$ pip3 install xvfbwrapper
+Collecting xvfbwrapper
+  Downloading https://files.pythonhosted.org/packages/57/b6/4920eabda9b49630dea58745e79f9919aba6408d460afe758bf6e9b21a04/xvfbwrapper-0.2.9.tar.gz
+Building wheels for collected packages: xvfbwrapper
+  Running setup.py bdist_wheel for xvfbwrapper ... -done
+  Stored in directory: /home/travis/.cache/pip/wheels/10/f2/61/cacfaf84b352c223761ea8d19616e3b5ac5c27364da72863f0
+Successfully built xvfbwrapper
+Installing collected packages: xvfbwrapper
+Successfully installed xvfbwrapper-0.2.9
+install.3
+18.45s$ pip3 install pyqt5
+Collecting pyqt5
+  Downloading https://files.pythonhosted.org/packages/d4/bf/d884da8e2f7096d201c891d515eb6813a8e85df5eb6f5e12e867bf1d831c/PyQt5-5.11.3-5.11.2-cp35.cp36.cp37.cp38-abi3-manylinux1_x86_64.whl (117.8MB)
+    100% |████████████████████████████████| 117.8MB 12kB/s
+Collecting PyQt5_sip<4.20,>=4.19.11 (from pyqt5)
+  Downloading https://files.pythonhosted.org/packages/46/ba/30995383332fd46e4ee59a405bd75ae8ee099001360e7a680f1685985a49/PyQt5_sip-4.19.13-cp36-cp36m-manylinux1_x86_64.whl (66kB)
+    100% |████████████████████████████████| 71kB 9.6MB/s
+Installing collected packages: PyQt5-sip, pyqt5
+Successfully installed PyQt5-sip-4.19.13 pyqt5-5.11.3
+install.4
+4.29s$ pip3 install opencv-python
+Collecting opencv-python
+  Downloading https://files.pythonhosted.org/packages/18/7f/c836c44ab30074a8486e30f8ea6adc8e6ac02332851ab6cc069e2ac35b84/opencv_python-3.4.3.18-cp36-cp36m-manylinux1_x86_64.whl (25.0MB)
+    100% |████████████████████████████████| 25.0MB 60kB/s
+Requirement already satisfied: numpy>=1.11.3 in /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (from opencv-python)
+Installing collected packages: opencv-python
+Successfully installed opencv-python-3.4.3.18
+install.5
+1.89s$ pip3 install requests
+Collecting requests
+  Downloading https://files.pythonhosted.org/packages/f1/ca/10332a30cb25b627192b4ea272c351bce3ca1091e541245cccbace6051d8/requests-2.20.0-py2.py3-none-any.whl (60kB)
+    100% |████████████████████████████████| 61kB 2.2MB/s
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading https://files.pythonhosted.org/packages/56/9d/1d02dd80bc4cd955f98980f28c5ee2200e1209292d5f9e9cc8d030d18655/certifi-2018.10.15-py2.py3-none-any.whl (146kB)
+    100% |████████████████████████████████| 153kB 3.6MB/s
+Collecting idna<2.8,>=2.5 (from requests)
+  Downloading https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 4.0MB/s
+Collecting urllib3<1.25,>=1.21.1 (from requests)
+  Downloading https://files.pythonhosted.org/packages/8c/4b/5cbc4cb46095f369117dcb751821e1bef9dd86a07c968d8757e9204c324c/urllib3-1.24-py2.py3-none-any.whl (117kB)
+    100% |████████████████████████████████| 122kB 4.0MB/s
+Collecting chardet<3.1.0,>=3.0.2 (from requests)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+    100% |████████████████████████████████| 143kB 3.9MB/s
+Installing collected packages: certifi, idna, urllib3, chardet, requests
+Successfully installed certifi-2018.10.15 chardet-3.0.4 idna-2.7 requests-2.20.0 urllib3-1.24
+install.6
+6.14s$ pip3 install pyinstaller
+Collecting pyinstaller
+  Downloading https://files.pythonhosted.org/packages/03/32/0e0de593f129bf1d1e77eed562496d154ef4460fd5cecfd78612ef39a0cc/PyInstaller-3.4.tar.gz (3.5MB)
+    100% |████████████████████████████████| 3.5MB 417kB/s
+Requirement already satisfied: setuptools in /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (from pyinstaller)
+Collecting pefile>=2017.8.1 (from pyinstaller)
+  Downloading https://files.pythonhosted.org/packages/ed/cc/157f20038a80b6a9988abc06c11a4959be8305a0d33b6d21a134127092d4/pefile-2018.8.8.tar.gz (62kB)
+    100% |████████████████████████████████| 71kB 9.2MB/s
+Collecting macholib>=1.8 (from pyinstaller)
+  Downloading https://files.pythonhosted.org/packages/41/f1/6d23e1c79d68e41eb592338d90a33af813f98f2b04458aaf0b86908da2d8/macholib-1.11-py2.py3-none-any.whl
+Collecting altgraph (from pyinstaller)
+  Downloading https://files.pythonhosted.org/packages/0a/cc/646187eac4b797069e2e6b736f14cdef85dbe405c9bfc7803ef36e4f62ef/altgraph-0.16.1-py2.py3-none-any.whl
+Collecting future (from pefile>=2017.8.1->pyinstaller)
+  Downloading https://files.pythonhosted.org/packages/85/aa/ba2e24dcb889d7e98733f87515d80b3512418b80ba79d82d2ddcd43fadf3/future-0.17.0.tar.gz (827kB)
+    100% |████████████████████████████████| 829kB 1.6MB/s
+Building wheels for collected packages: pyinstaller, pefile, future
+  Running setup.py bdist_wheel for pyinstaller ... \\done
+  Stored in directory: /home/travis/.cache/pip/wheels/09/ee/0a/94ef5d39074625f49e2e9cf97ac30cb7a87e1a7458ed195b8d
+  Running setup.py bdist_wheel for pefile ... -done
+  Stored in directory: /home/travis/.cache/pip/wheels/d9/c6/56/a372ee1059440413d55d13f78adfd16c8719553a5b4efdd0c1
+  Running setup.py bdist_wheel for future ... |done
+  Stored in directory: /home/travis/.cache/pip/wheels/fc/5b/ec/2983c4a6e3692d1315f44d6480c6abdd8585d96471b431d6b4
+Successfully built pyinstaller pefile future
+Installing collected packages: future, pefile, altgraph, macholib, pyinstaller
+Successfully installed altgraph-0.16.1 future-0.17.0 macholib-1.11 pefile-2018.8.8 pyinstaller-3.4
+install.7
+1.74s$ pip3 install --upgrade setuptools
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/82/a1/ba6fb41367b375f5cb653d1317d8ca263c636cff6566e2da1b0da716069d/setuptools-40.5.0-py2.py3-none-any.whl (569kB)
+    100% |████████████████████████████████| 573kB 1.9MB/s
+Installing collected packages: setuptools
+  Found existing installation: setuptools 38.2.4
+    Uninstalling setuptools-38.2.4:
+      Successfully uninstalled setuptools-38.2.4
+Successfully installed setuptools-40.5.0
+install.8
+3.57s$ sudo apt-get install pylint
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  python-astroid python-egenix-mxdatetime python-egenix-mxtools
+  python-logilab-common python-tk
+Suggested packages:
+  python-egenix-mxdatetime-dbg python-egenix-mxdatetime-doc
+  python-egenix-mxtools-dbg python-egenix-mxtools-doc pyro python-unittest2
+  tix python-tk-dbg
+The following NEW packages will be installed:
+  pylint python-astroid python-egenix-mxdatetime python-egenix-mxtools
+  python-logilab-common python-tk
+0 upgraded, 6 newly installed, 0 to remove and 259 not upgraded.
+Need to get 730 kB of archives.
+After this operation, 8,644 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-logilab-common all 0.61.0-1 [411 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-astroid all 1.0.1-1 [48.5 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 pylint all 1.1.0-1 [106 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxtools amd64 3.2.7-1build1 [75.1 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxdatetime amd64 3.2.7-1build1 [66.7 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-tk amd64 2.7.5-1ubuntu1 [23.6 kB]
+Fetched 730 kB in 0s (1,747 kB/s)
+Selecting previously unselected package python-logilab-common.
+(Reading database ... 93695 files and directories currently installed.)
+Preparing to unpack .../python-logilab-common_0.61.0-1_all.deb ...
+Unpacking python-logilab-common (0.61.0-1) ...
+Selecting previously unselected package python-astroid.
+Preparing to unpack .../python-astroid_1.0.1-1_all.deb ...
+Unpacking python-astroid (1.0.1-1) ...
+Selecting previously unselected package pylint.
+Preparing to unpack .../pylint_1.1.0-1_all.deb ...
+ERROR: pylint is broken - called emacs-package-install as a new-style add-on, but has no compat file.
+Unpacking pylint (1.1.0-1) ...
+Selecting previously unselected package python-egenix-mxtools.
+Preparing to unpack .../python-egenix-mxtools_3.2.7-1build1_amd64.deb ...
+Unpacking python-egenix-mxtools (3.2.7-1build1) ...
+Selecting previously unselected package python-egenix-mxdatetime.
+Preparing to unpack .../python-egenix-mxdatetime_3.2.7-1build1_amd64.deb ...
+Unpacking python-egenix-mxdatetime (3.2.7-1build1) ...
+Selecting previously unselected package python-tk.
+Preparing to unpack .../python-tk_2.7.5-1ubuntu1_amd64.deb ...
+Unpacking python-tk (2.7.5-1ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up python-logilab-common (0.61.0-1) ...
+Setting up python-astroid (1.0.1-1) ...
+Setting up pylint (1.1.0-1) ...
+ERROR: pylint is broken - called emacs-package-install as a new-style add-on, but has no compat file.
+Install pylint for emacs
+Install pylint for emacs23
+install/pylint: Handling install for emacsen flavor emacs23
+Loading 00debian-vars...
+Loading /etc/emacs/site-start.d/50autoconf.el (source)...
+Loading /etc/emacs/site-start.d/50pylint.el (source)...
+Loading /usr/share/emacs23/site-lisp/pylint/pylint.el (source)...
+Wrote /usr/share/emacs23/site-lisp/pylint/pylint.elc
+Install pylint for emacs24
+install/pylint: Handling install for emacsen flavor emacs24
+Loading 00debian-vars...
+Loading /etc/emacs/site-start.d/50autoconf.el (source)...
+Loading /etc/emacs/site-start.d/50pylint.el (source)...
+Loading /usr/share/emacs24/site-lisp/pylint/pylint.el (source)...
+Wrote /usr/share/emacs24/site-lisp/pylint/pylint.elc
+Setting up python-egenix-mxtools (3.2.7-1build1) ...
+Setting up python-egenix-mxdatetime (3.2.7-1build1) ...
+Setting up python-tk (2.7.5-1ubuntu1) ...
+16.85s$ pyinstaller main.py
+53 INFO: PyInstaller: 3.4
+53 INFO: Python: 3.6.3
+56 INFO: Platform: Linux-4.4.0-101-generic-x86_64-with-debian-jessie-sid
+56 INFO: wrote /home/travis/build/burnmg/TYTS/main.spec
+58 INFO: UPX is not available.
+60 INFO: Extending PYTHONPATH with paths
+['/home/travis/build/burnmg', '/home/travis/build/burnmg/TYTS']
+60 INFO: checking Analysis
+60 INFO: Building Analysis because Analysis-00.toc is non existent
+60 INFO: Initializing module dependency graph...
+62 INFO: Initializing module graph hooks...
+63 INFO: Analyzing base_library.zip ...
+3811 INFO: running Analysis Analysis-00.toc
+3827 INFO: Caching module hooks...
+3832 INFO: Analyzing /home/travis/build/burnmg/TYTS/main.py
+3966 INFO: Processing pre-safe import module hook   urllib3.packages.six.moves
+5363 INFO: Loading module hooks...
+5363 INFO: Loading module hook "hook-cv2.py"...
+6255 INFO: Processing pre-find module path hook   distutils
+6255 INFO: distutils: retargeting to non-venv dir '/opt/python/3.6.3/lib/python3.6/distutils'
+7752 INFO: Processing pre-safe import module hook   setuptools.extern.six.moves
+8183 INFO: Processing pre-find module path hook   site
+8184 INFO: site: retargeting to fake-dir '/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/fake-modules'
+10453 INFO: Loading module hook "hook-distutils.py"...
+10458 INFO: Loading module hook "hook-certifi.py"...
+10459 INFO: Loading module hook "hook-lib2to3.py"...
+10466 INFO: Loading module hook "hook-PyQt5.QtGui.py"...
+10573 INFO: Loading module hook "hook-setuptools.py"...
+11149 INFO: Loading module hook "hook-xml.py"...
+11207 INFO: Loading module hook "hook-encodings.py"...
+11267 INFO: Loading module hook "hook-sysconfig.py"...
+11277 INFO: Loading module hook "hook-sqlite3.py"...
+11341 INFO: Loading module hook "hook-PyQt5.py"...
+11360 WARNING: Hidden import "sip" not found!
+11361 INFO: Loading module hook "hook-numpy.py"...
+11361 INFO: Loading module hook "hook-numpy.core.py"...
+11580 INFO: Loading module hook "hook-pkg_resources.py"...
+11786 INFO: Processing pre-safe import module hook   win32com
+12029 INFO: Loading module hook "hook-PyQt5.QtWidgets.py"...
+12089 INFO: Loading module hook "hook-pydoc.py"...
+12089 INFO: Loading module hook "hook-PyQt5.QtCore.py"...
+12145 INFO: Looking for ctypes DLLs
+12394 INFO: Analyzing run-time hooks ...
+12441 INFO: Including run-time hook 'pyi_rth_multiprocessing.py'
+12445 INFO: Including run-time hook 'pyi_rth_pkgres.py'
+12446 INFO: Including run-time hook 'pyi_rth_qt5.py'
+12464 INFO: Looking for dynamic libraries
+14548 INFO: Looking for eggs
+14548 INFO: Using Python library /opt/python/3.6.3/lib/libpython3.6m.so.1.0
+14562 INFO: Warnings written to /home/travis/build/burnmg/TYTS/build/main/warn-main.txt
+14643 INFO: Graph cross-reference written to /home/travis/build/burnmg/TYTS/build/main/xref-main.html
+14927 INFO: checking PYZ
+14927 INFO: Building PYZ because PYZ-00.toc is non existent
+14927 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz
+15925 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz completed successfully.
+15943 INFO: checking PKG
+15943 INFO: Building PKG because PKG-00.toc is non existent
+15943 INFO: Building PKG (CArchive) PKG-00.pkg
+15961 INFO: Building PKG (CArchive) PKG-00.pkg completed successfully.
+15962 INFO: Bootloader /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/bootloader/Linux-64bit/run
+15962 INFO: checking EXE
+15962 INFO: Building EXE because EXE-00.toc is non existent
+15962 INFO: Building EXE from EXE-00.toc
+15962 INFO: Appending archive to ELF section in EXE /home/travis/build/burnmg/TYTS/build/main/main
+15976 INFO: Building EXE from EXE-00.toc completed successfully.
+15978 INFO: checking COLLECT
+15978 INFO: Building COLLECT because COLLECT-00.toc is non existent
+15978 INFO: Building COLLECT COLLECT-00.toc
+16564 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+The command "pyinstaller main.py" exited with 0.
+0.11s$ python3 testBuddingWidget.py
+0
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK
+The command "python3 testBuddingWidget.py" exited with 0.
+0.30s$ python3 testEventController.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+OK
+The command "python3 testEventController.py" exited with 0.
+1.00s$ pylint ../TYTS
+No config file found, using default configuration
+************* Module TYTS
+C:  1, 0: Missing module docstring (missing-docstring)
+************* Module TYTS.collectButton
+C: 14, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 19, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:  1, 0: Invalid module name "collectButton" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  1, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+C:  4, 0: Missing class docstring (missing-docstring)
+C:  8, 4: Invalid argument name "Text" (invalid-name)
+E:  8, 4: Use of super on an old style class (super-on-old-class)
+E: 11, 8: Instance of 'CollectButton' has no 'setText' member (no-member)
+W:  8,23: Unused argument 'Text' (unused-argument)
+W:  8,29: Unused argument 'parent' (unused-argument)
+C: 13, 4: Missing method docstring (missing-docstring)
+E: 15, 8: Instance of 'CollectButton' has no 'setEnabled' member (no-member)
+E: 16, 8: Instance of 'CollectButton' has no 'setText' member (no-member)
+C: 18, 4: Missing method docstring (missing-docstring)
+E: 20, 8: Instance of 'CollectButton' has no 'setEnabled' member (no-member)
+E: 21, 8: Instance of 'CollectButton' has no 'setText' member (no-member)
+************* Module TYTS.main
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  3, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+F:  4, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+W:  6, 0: Relative import 'buddingMainWindow', should be 'TYTS.buddingMainWindow' (relative-import)
+C: 13, 8: Invalid attribute name "ui" (invalid-name)
+C:  9, 0: Missing class docstring (missing-docstring)
+E: 10, 4: Use of super on an old style class (super-on-old-class)
+R:  9, 0: Too few public methods (0/2) (too-few-public-methods)
+C: 20, 4: Invalid constant name "app" (invalid-name)
+C: 21, 4: Invalid constant name "mainWindow" (invalid-name)
+E: 22, 4: Instance of 'BuddingMainWindow' has no 'show' member (no-member)
+************* Module TYTS.testBuddingWidget
+C: 15, 0: Line too long (105/80) (line-too-long)
+C: 33, 0: Line too long (101/80) (line-too-long)
+C: 36, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:  1, 0: Invalid module name "testBuddingWidget" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  4, 0: Relative import 'buddingWidget', should be 'TYTS.buddingWidget' (relative-import)
+C:  7, 0: Missing class docstring (missing-docstring)
+W:  9, 4: __init__ method from base class 'BuddingWidget' is not called (super-init-not-called)
+C: 23, 0: Missing class docstring (missing-docstring)
+C: 28, 4: Invalid method name "testHetNextMovie" (invalid-name)
+C: 28, 4: Missing method docstring (missing-docstring)
+W: 33,12: Unused variable 'i' (unused-variable)
+R: 23, 0: Too many public methods (46/20) (too-many-public-methods)
+************* Module TYTS.mydata
+C:236, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:237, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:239, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:240, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:241, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:242, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:243, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:244, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
+C:  1, 0: Missing module docstring (missing-docstring)
+W: 12,-1: String statement has no effect (pointless-string-statement)
+W: 40,-1: String statement has no effect (pointless-string-statement)
+C: 49, 0: Invalid function name "initDB" (invalid-name)
+C: 49, 0: Missing function docstring (missing-docstring)
+C: 53, 4: Invalid variable name "c" (invalid-name)
+C: 90, 4: Invalid variable name "c" (invalid-name)
+C: 94,11: Invalid variable name "f" (invalid-name)
+W: 94, 8: Unused variable 'i' (unused-variable)
+C:105, 0: Missing function docstring (missing-docstring)
+C:109, 4: Invalid variable name "c" (invalid-name)
+C:110, 4: Invalid variable name "t" (invalid-name)
+C:124, 0: Missing function docstring (missing-docstring)
+C:128, 4: Invalid variable name "c" (invalid-name)
+C:129, 4: Invalid variable name "t" (invalid-name)
+C:135, 4: Invalid variable name "t" (invalid-name)
+C:151, 0: Missing function docstring (missing-docstring)
+C:155, 4: Invalid variable name "c" (invalid-name)
+C:156, 4: Invalid variable name "t" (invalid-name)
+C:174, 0: Missing function docstring (missing-docstring)
+C:178, 4: Invalid variable name "c" (invalid-name)
+C:179, 4: Invalid variable name "t" (invalid-name)
+C:194, 0: Missing function docstring (missing-docstring)
+C:197, 4: Invalid variable name "c" (invalid-name)
+C:198, 4: Invalid variable name "t" (invalid-name)
+C:213, 4: Invalid variable name "ck" (invalid-name)
+C:214, 4: Invalid variable name "ckExpected" (invalid-name)
+C:222, 0: Invalid function name "getApperance" (invalid-name)
+C:222, 0: Missing function docstring (missing-docstring)
+C:225, 4: Invalid variable name "c" (invalid-name)
+************* Module TYTS.buddingMainWindow
+C:  1, 0: Invalid module name "buddingMainWindow" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  7, 0: Unable to import 'PyQt5' (import-error)
+F:  8, 0: Unable to import 'PyQt5' (import-error)
+W: 10, 0: Relative import 'buddingWidget', should be 'TYTS.buddingWidget' (relative-import)
+W: 11, 0: Relative import 'collectButton', should be 'TYTS.collectButton' (relative-import)
+W: 12, 0: Relative import 'eventController', should be 'TYTS.eventController' (relative-import)
+R: 16, 0: Too many instance attributes (20/7) (too-many-instance-attributes)
+C:108, 8: Invalid attribute name "buddingWidget" (invalid-name)
+C:162, 8: Invalid attribute name "storeButton" (invalid-name)
+C: 43, 8: Invalid attribute name "verticalLayout" (invalid-name)
+C:150, 8: Invalid attribute name "voiceButton" (invalid-name)
+C:130, 8: Invalid attribute name "tailWidget" (invalid-name)
+C: 97, 8: Invalid attribute name "contentLayout" (invalid-name)
+C: 58, 8: Invalid attribute name "tittleLayout" (invalid-name)
+C: 45, 8: Invalid attribute name "tittleWidget" (invalid-name)
+C:174, 8: Invalid attribute name "logoutButton" (invalid-name)
+C: 65, 8: Invalid attribute name "collectSmileButton" (invalid-name)
+C: 84, 8: Invalid attribute name "contentWidget" (invalid-name)
+C: 95, 8: Invalid attribute name "horizontalLayout_5" (invalid-name)
+C: 56, 8: Invalid attribute name "horizontalLayout_4" (invalid-name)
+C:143, 8: Invalid attribute name "tailLayout" (invalid-name)
+C:141, 8: Invalid attribute name "horizontalLayout_6" (invalid-name)
+C: 16, 0: Missing class docstring (missing-docstring)
+C: 20, 4: Invalid method name "setupUi" (invalid-name)
+C: 20, 4: Invalid argument name "MainWindow" (invalid-name)
+C: 20, 4: Missing method docstring (missing-docstring)
+C: 23, 8: Invalid variable name "sizePolicy" (invalid-name)
+C: 33, 8: Invalid variable name "sizePolicy" (invalid-name)
+C: 46, 8: Invalid variable name "sizePolicy" (invalid-name)
+E: 68, 8: Instance of 'CollectButton' has no 'setObjectName' member (no-member)
+C: 71, 8: Invalid variable name "spacerItem" (invalid-name)
+C: 85, 8: Invalid variable name "sizePolicy" (invalid-name)
+C:101, 8: Invalid variable name "spacerItem1" (invalid-name)
+C:109, 8: Invalid variable name "sizePolicy" (invalid-name)
+E:115,12: Instance of 'BuddingWidget' has no 'sizePolicy' member (no-member)
+E:117, 8: Instance of 'BuddingWidget' has no 'setSizePolicy' member (no-member)
+E:118, 8: Instance of 'BuddingWidget' has no 'setObjectName' member (no-member)
+C:122, 8: Invalid variable name "spacerItem2" (invalid-name)
+C:131, 8: Invalid variable name "sizePolicy" (invalid-name)
+C:145, 8: Invalid variable name "spacerItem3" (invalid-name)
+C:151, 8: Invalid variable name "sizePolicy" (invalid-name)
+C:163, 8: Invalid variable name "sizePolicy" (invalid-name)
+C:175, 8: Invalid variable name "sizePolicy" (invalid-name)
+R: 20, 4: Too many statements (113/50) (too-many-statements)
+C:194, 4: Invalid method name "retranslateUi" (invalid-name)
+C:194, 4: Invalid argument name "MainWindow" (invalid-name)
+C:194, 4: Missing method docstring (missing-docstring)
+C:204, 4: Invalid method name "makeConnection" (invalid-name)
+C:204, 4: Missing method docstring (missing-docstring)
+E:205, 8: Instance of 'CollectButton' has no 'clicked' member (no-member)
+W:206, 8: Unnecessary pass statement (unnecessary-pass)
+C:208, 4: Invalid method name "updateMoney" (invalid-name)
+C:208, 4: Missing method docstring (missing-docstring)
+C:212, 4: Invalid method name "enableCollect" (invalid-name)
+C:212, 4: Missing method docstring (missing-docstring)
+C:215, 4: Invalid method name "disableCollect" (invalid-name)
+C:215, 4: Missing method docstring (missing-docstring)
+W:108, 8: Attribute 'buddingWidget' defined outside __init__ (attribute-defined-outside-init)
+W: 32, 8: Attribute 'centralwidget' defined outside __init__ (attribute-defined-outside-init)
+W: 79, 8: Attribute 'level' defined outside __init__ (attribute-defined-outside-init)
+W: 61, 8: Attribute 'money' defined outside __init__ (attribute-defined-outside-init)
+W: 76, 8: Attribute 'energy' defined outside __init__ (attribute-defined-outside-init)
+W:162, 8: Attribute 'storeButton' defined outside __init__ (attribute-defined-outside-init)
+W: 43, 8: Attribute 'verticalLayout' defined outside __init__ (attribute-defined-outside-init)
+W:150, 8: Attribute 'voiceButton' defined outside __init__ (attribute-defined-outside-init)
+W:130, 8: Attribute 'tailWidget' defined outside __init__ (attribute-defined-outside-init)
+W: 97, 8: Attribute 'contentLayout' defined outside __init__ (attribute-defined-outside-init)
+W: 58, 8: Attribute 'tittleLayout' defined outside __init__ (attribute-defined-outside-init)
+W: 45, 8: Attribute 'tittleWidget' defined outside __init__ (attribute-defined-outside-init)
+W:174, 8: Attribute 'logoutButton' defined outside __init__ (attribute-defined-outside-init)
+W: 65, 8: Attribute 'collectSmileButton' defined outside __init__ (attribute-defined-outside-init)
+W: 84, 8: Attribute 'contentWidget' defined outside __init__ (attribute-defined-outside-init)
+W: 95, 8: Attribute 'horizontalLayout_5' defined outside __init__ (attribute-defined-outside-init)
+W: 56, 8: Attribute 'horizontalLayout_4' defined outside __init__ (attribute-defined-outside-init)
+W:143, 8: Attribute 'tailLayout' defined outside __init__ (attribute-defined-outside-init)
+W:141, 8: Attribute 'horizontalLayout_6' defined outside __init__ (attribute-defined-outside-init)
+************* Module TYTS.testEventController
+C:  7, 0: Line too long (81/80) (line-too-long)
+C:  8, 0: Line too long (90/80) (line-too-long)
+C:  1, 0: Invalid module name "testEventController" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  2, 0: Relative import 'eventController', should be 'TYTS.eventController' (relative-import)
+W: 10, 4: __init__ method from base class 'EventController' is not called (super-init-not-called)
+C: 14, 0: Missing class docstring (missing-docstring)
+C: 20, 4: Invalid method name "testOnSucessEvent" (invalid-name)
+C: 20, 4: Missing method docstring (missing-docstring)
+C: 25, 4: Invalid method name "testOnFailEvent1" (invalid-name)
+C: 25, 4: Missing method docstring (missing-docstring)
+C: 30, 4: Invalid method name "testOnFailEvent2" (invalid-name)
+C: 30, 4: Missing method docstring (missing-docstring)
+R: 14, 0: Too many public methods (48/20) (too-many-public-methods)
+************* Module TYTS.buddingWidget
+C: 27, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 37, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+W:  9, 0: Redefining built-in 'dir' (redefined-builtin)
+C:  1, 0: Invalid module name "buddingWidget" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  3, 0: Unable to import 'PyQt5.QtCore' (import-error)
+F:  4, 0: Unable to import 'PyQt5.QtGui' (import-error)
+F:  5, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+F:  6, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+F:  7, 0: Unable to import 'PyQt5.QtWidgets' (import-error)
+C:  9, 0: Invalid constant name "dir" (invalid-name)
+C: 21, 8: Invalid attribute name "movieLabel" (invalid-name)
+C: 17, 8: Invalid attribute name "currentMovieIndex" (invalid-name)
+C: 18, 8: Invalid attribute name "totalMovieSize" (invalid-name)
+C: 12, 0: Missing class docstring (missing-docstring)
+E: 14, 4: Use of super on an old style class (super-on-old-class)
+E: 24, 8: Instance of 'BuddingWidget' has no 'setLayout' member (no-member)
+C: 26, 4: Invalid method name "mousePressEvent" (invalid-name)
+C: 26, 4: Missing method docstring (missing-docstring)
+W: 26,30: Unused argument 'event' (unused-argument)
+C: 30, 4: Invalid method name "showNextMovie" (invalid-name)
+C: 30, 4: Missing method docstring (missing-docstring)
+C: 36, 4: Invalid method name "mouseReleaseEvent" (invalid-name)
+C: 36, 4: Missing method docstring (missing-docstring)
+W: 36,32: Unused argument 'event' (unused-argument)
+R: 36, 4: Method could be a function (no-self-use)
+C: 39, 4: Invalid method name "getNextMovie" (invalid-name)
+C: 39, 4: Missing method docstring (missing-docstring)
+************* Module TYTS.eventController
+C: 19, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 25, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 31, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:  1, 0: Invalid module name "eventController" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  1, 0: Unable to import 'PyQt5' (import-error)
+W:  3, 0: Relative import 'buddingEmotion', should be 'TYTS.buddingEmotion' (relative-import)
+W:  4, 0: Relative import 'mydata', should be 'TYTS.mydata' (relative-import)
+C: 14, 8: Invalid attribute name "ui" (invalid-name)
+C:  9, 0: Missing class docstring (missing-docstring)
+C:  9, 0: Old-style class defined. (old-style-class)
+C: 13, 4: Invalid argument name "ui" (invalid-name)
+C: 24, 4: Invalid method name "collectStart" (invalid-name)
+C: 24, 4: Missing method docstring (missing-docstring)
+C: 30, 4: Invalid method name "collectFinish" (invalid-name)
+C: 30, 4: Missing method docstring (missing-docstring)
+C: 37, 4: Invalid method name "onSuccessEvent" (invalid-name)
+C: 37, 4: Missing method docstring (missing-docstring)
+C: 40, 4: Invalid method name "onFailEvent" (invalid-name)
+C: 40, 4: Missing method docstring (missing-docstring)
+************* Module TYTS.test_pyqt
+C: 66, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  5, 0: Unable to import 'PyQt5' (import-error)
+W:  7, 0: Relative import 'mydata', should be 'TYTS.mydata' (relative-import)
+W:  8, 0: Relative import 'buddingMainWindow', should be 'TYTS.buddingMainWindow' (relative-import)
+W:  9, 0: Relative import 'login_window', should be 'TYTS.login_window' (relative-import)
+C: 75, 8: Invalid attribute name "ui" (invalid-name)
+C: 12, 0: Missing class docstring (missing-docstring)
+C: 13, 4: Missing method docstring (missing-docstring)
+C: 17, 4: Missing method docstring (missing-docstring)
+C: 39, 4: Missing method docstring (missing-docstring)
+C: 61, 4: Missing method docstring (missing-docstring)
+E: 65, 8: Instance of 'ApplicationWindow' has no 'close' member (no-member)
+E: 67, 8: Instance of 'BuddingWindow' has no 'show' member (no-member)
+E: 69, 4: Use of super on an old style class (super-on-old-class)
+C: 87, 8: Invalid attribute name "ui" (invalid-name)
+C: 83, 0: Missing class docstring (missing-docstring)
+E: 84, 4: Use of super on an old style class (super-on-old-class)
+C: 95, 4: Missing method docstring (missing-docstring)
+E: 96, 8: Instance of 'BuddingWindow' has no 'close' member (no-member)
+E: 97, 8: Instance of 'ApplicationWindow' has no 'show' member (no-member)
+R: 83, 0: Too few public methods (1/2) (too-few-public-methods)
+C:100, 0: Missing function docstring (missing-docstring)
+E:107, 4: Instance of 'ApplicationWindow' has no 'show' member (no-member)
+************* Module TYTS.login_window
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  7, 0: Unable to import 'PyQt5' (import-error)
+F:  8, 0: Unable to import 'PyQt5' (import-error)
+F:  9, 0: Unable to import 'PyQt5' (import-error)
+R: 12, 0: Too many instance attributes (14/7) (too-many-instance-attributes)
+C: 12, 0: Invalid class name "Ui_Login_Window" (invalid-name)
+C: 16, 8: Invalid attribute name "centralWidget" (invalid-name)
+C: 67, 8: Invalid attribute name "statusBar" (invalid-name)
+C: 64, 8: Invalid attribute name "mainToolBar" (invalid-name)
+C: 60, 8: Invalid attribute name "menuBar" (invalid-name)
+C: 12, 0: Missing class docstring (missing-docstring)
+C: 13, 4: Invalid method name "setupUi" (invalid-name)
+C: 13, 4: Invalid argument name "Login_Window" (invalid-name)
+C: 13, 4: Missing method docstring (missing-docstring)
+C: 43, 8: Invalid variable name "sizePolicy" (invalid-name)
+R: 13, 4: Too many statements (55/50) (too-many-statements)
+C: 74, 4: Invalid method name "retranslateUi" (invalid-name)
+C: 74, 4: Invalid argument name "Login_Window" (invalid-name)
+C: 74, 4: Missing method docstring (missing-docstring)
+W: 24, 8: Attribute 'username' defined outside __init__ (attribute-defined-outside-init)
+W: 16, 8: Attribute 'centralWidget' defined outside __init__ (attribute-defined-outside-init)
+W: 67, 8: Attribute 'statusBar' defined outside __init__ (attribute-defined-outside-init)
+W: 53, 8: Attribute 'mylab' defined outside __init__ (attribute-defined-outside-init)
+W: 18, 8: Attribute 'label' defined outside __init__ (attribute-defined-outside-init)
+W: 28, 8: Attribute 'pwd' defined outside __init__ (attribute-defined-outside-init)
+W: 21, 8: Attribute 'label_2' defined outside __init__ (attribute-defined-outside-init)
+W: 32, 8: Attribute 'label_3' defined outside __init__ (attribute-defined-outside-init)
+W: 41, 8: Attribute 'test' defined outside __init__ (attribute-defined-outside-init)
+W: 38, 8: Attribute 'login' defined outside __init__ (attribute-defined-outside-init)
+W: 64, 8: Attribute 'mainToolBar' defined outside __init__ (attribute-defined-outside-init)
+W: 35, 8: Attribute 'reg' defined outside __init__ (attribute-defined-outside-init)
+W: 56, 8: Attribute 'change' defined outside __init__ (attribute-defined-outside-init)
+W: 60, 8: Attribute 'menuBar' defined outside __init__ (attribute-defined-outside-init)
+W:  8, 0: Unused import QtGui (unused-import)
+************* Module TYTS.buddingEmotion
+C: 26, 0: Line too long (95/80) (line-too-long)
+C: 43, 0: Line too long (85/80) (line-too-long)
+C: 53, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 57, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 64, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 71, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 75, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 77, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C:  1, 0: Invalid module name "buddingEmotion" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  3, 0: Unable to import 'cv2' (import-error)
+F:  5, 0: Unable to import 'PyQt5.QtCore' (import-error)
+F:  6, 0: Unable to import 'PyQt5.QtCore' (import-error)
+C:  9, 0: Missing class docstring (missing-docstring)
+E: 18, 8: Instance of 'EmotionThread' has no 'wait' member (no-member)
+C: 20, 4: Missing method docstring (missing-docstring)
+C: 35,47: Invalid variable name "f" (invalid-name)
+W: 22, 8: Unused variable 'ret' (unused-variable)
+R:  9, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 58, 8: Invalid attribute name "emotionThread" (invalid-name)
+C: 51, 0: Missing class docstring (missing-docstring)
+C: 51, 0: Old-style class defined. (old-style-class)
+C: 56, 4: Invalid method name "startRecog" (invalid-name)
+C: 56, 4: Missing method docstring (missing-docstring)
+E: 60, 8: Instance of 'EmotionThread' has no 'start' member (no-member)
+C: 62, 4: Invalid method name "processResult" (invalid-name)
+C: 62, 4: Missing method docstring (missing-docstring)
+W: 70, 8: No exception type(s) specified (bare-except)
+C: 74, 4: Invalid method name "stopRecog" (invalid-name)
+C: 74, 4: Missing method docstring (missing-docstring)
+E: 76,11: Instance of 'EmotionThread' has no 'isFinished' member (no-member)
+E: 78,12: Instance of 'EmotionThread' has no 'terminate' member (no-member)
+E: 79,12: Instance of 'EmotionThread' has no 'wait' member (no-member)
+W: 58, 8: Attribute 'emotionThread' defined outside __init__ (attribute-defined-outside-init)
+R:  1, 0: Similar lines in 6 files
+==TYTS.buddingMainWindow:130
+==TYTS.buddingMainWindow:150
+==TYTS.buddingMainWindow:162
+==TYTS.buddingMainWindow:174
+==TYTS.buddingMainWindow:45
+==TYTS.login_window:42
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
+        )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth( (duplicate-code)
+Report
+======
+588 statements analysed.
+Raw metrics
+-----------
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |678    |77.75 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |107    |12.27 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |27     |3.10  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |60     |6.88  |NC       |NC         |
++----------+-------+------+---------+-----------+
+External dependencies
+---------------------
+::
+    requests (TYTS.buddingEmotion)
+Messages by category
+--------------------
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |196    |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |11     |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |60     |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |27     |NC       |NC         |
++-----------+-------+---------+-----------+
+% errors / warnings by module
+-----------------------------
++-------------------------+------+--------+---------+-----------+
+|module                   |error |warning |refactor |convention |
++=========================+======+========+=========+===========+
+|TYTS.test_pyqt           |25.93 |5.00    |9.09     |6.12       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.collectButton       |22.22 |3.33    |0.00     |4.08       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.buddingMainWindow   |18.52 |38.33   |18.18    |22.96      |
++-------------------------+------+--------+---------+-----------+
+|TYTS.buddingEmotion      |18.52 |5.00    |18.18    |11.22      |
++-------------------------+------+--------+---------+-----------+
+|TYTS.buddingWidget       |7.41  |5.00    |9.09     |8.67       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.main                |7.41  |1.67    |9.09     |2.55       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.login_window        |0.00  |25.00   |18.18    |7.14       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.testBuddingWidget   |0.00  |5.00    |9.09     |4.59       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.mydata              |0.00  |5.00    |0.00     |17.86      |
++-------------------------+------+--------+---------+-----------+
+|TYTS.testEventController |0.00  |3.33    |9.09     |5.61       |
++-------------------------+------+--------+---------+-----------+
+|TYTS.eventController     |0.00  |3.33    |0.00     |8.67       |
++-------------------------+------+--------+---------+-----------+
+Messages
+--------
++-------------------------------+------------+
+|message id                     |occurrences |
++===============================+============+
+|invalid-name                   |101         |
++-------------------------------+------------+
+|missing-docstring              |64          |
++-------------------------------+------------+
+|attribute-defined-outside-init |34          |
++-------------------------------+------------+
+|superfluous-parens             |23          |
++-------------------------------+------------+
+|no-member                      |22          |
++-------------------------------+------------+
+|import-error                   |18          |
++-------------------------------+------------+
+|relative-import                |11          |
++-------------------------------+------------+
+|line-too-long                  |6           |
++-------------------------------+------------+
+|super-on-old-class             |5           |
++-------------------------------+------------+
+|unused-argument                |4           |
++-------------------------------+------------+
+|unused-variable                |3           |
++-------------------------------+------------+
+|too-few-public-methods         |3           |
++-------------------------------+------------+
+|too-many-statements            |2           |
++-------------------------------+------------+
+|too-many-public-methods        |2           |
++-------------------------------+------------+
+|too-many-instance-attributes   |2           |
++-------------------------------+------------+
+|super-init-not-called          |2           |
++-------------------------------+------------+
+|pointless-string-statement     |2           |
++-------------------------------+------------+
+|old-style-class                |2           |
++-------------------------------+------------+
+|unused-import                  |1           |
++-------------------------------+------------+
+|unnecessary-pass               |1           |
++-------------------------------+------------+
+|redefined-builtin              |1           |
++-------------------------------+------------+
+|no-self-use                    |1           |
++-------------------------------+------------+
+|duplicate-code                 |1           |
++-------------------------------+------------+
+|bare-except                    |1           |
++-------------------------------+------------+
+Global evaluation
+-----------------
+Your code has been rated at 3.16/10
+Statistics by type
+------------------
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |12     |NC         |NC         |0.00        |58.33    |
++---------+-------+-----------+-----------+------------+---------+
+|class    |14     |NC         |NC         |7.14        |7.14     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |46     |NC         |NC         |32.61       |50.00    |
++---------+-------+-----------+-----------+------------+---------+
+|function |8      |NC         |NC         |0.00        |25.00    |
++---------+-------+-----------+-----------+------------+---------+
+Duplication
+-----------
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |30    |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |3.155 |NC       |NC         |
++-------------------------+------+---------+-----------+
+The command "pylint ../TYTS" exited with 31.
+Done. Your build exited with 1.
+Top
+
+Search all repositories
+
+My Repositories
+
+ burnmg/TYTS  13
+ Duration: 1 min 23 sec
+
+ Finished: less than a minute ago
+
+ burnmg/SmileDetection  12
+ Duration: 15 sec
+
+ Finished: a day ago
+
+©TRAVIS CI, GMBH
+Rigaer Straße 8
+10247 Berlin, Germany
+Work with Travis CI
+Blog
+Email
+Twitter
+HELP
+Documentation
+Community
+Changelog
+LEGAL
+Imprint
+Terms of Service
+Privacy Policy
+Security Statement
+TRAVIS CI STATUS
+Status: Travis CI Status

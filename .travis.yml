@@ -1,0 +1,23 @@
+language: python
+python:
+  - "3.6"
+  # PyPy versions
+
+# command to install dependencies
+
+
+install:
+  - sudo apt-get install xvfb
+  - pip3 install xvfbwrapper
+  - pip3 install pyqt5
+  - pip3 install opencv-python
+  - pip3 install requests
+  - pip3 install pyinstaller
+  - pip3 install --upgrade setuptools
+  - sudo apt-get install pylint
+
+script:
+ - pyinstaller main.py
+ - python3 testBuddingWidget.py
+ - python3 testEventController.py
+ - pylint ../TYTS
