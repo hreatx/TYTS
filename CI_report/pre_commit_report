@@ -1,0 +1,13 @@
+linxideMBP-2:CI_report linxi$ pre-commit run --all-files
+Trim Trailing Whitespace.................................................Passed
+Fix End of Files.........................................................Passed
+Check JSON...........................................(no files to check)Skipped
+Check Yaml...............................................................Passed
+Debug Statements (Python)................................................Passed
+Tests should end in _test.py.........................(no files to check)Skipped
+Fix requirements.txt.................................(no files to check)Skipped
+autopep8.................................................................Passed
+Validate Pre-Commit Manifest.........................(no files to check)Skipped
+Reorder python imports...................................................Passed
+Add trailing commas......................................................Passed
+Check for useless excludes...............................................Passed
