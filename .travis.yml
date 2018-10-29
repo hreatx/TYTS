@@ -3,7 +3,7 @@ python:
   - "3.6"
   # PyPy versions
 
-# command to install dependencies
+# command to install dependencies .
 
 
 install:
