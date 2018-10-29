@@ -1,6 +1,8 @@
 import sys
-import os
-from PyQt5.QtWidgets import *
+
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QMainWindow
+
 import buddingMainWindow
 
 

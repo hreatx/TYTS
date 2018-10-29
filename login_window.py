@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
+from PyQt5 import QtCore
+from PyQt5 import QtWidgets
+# from PyQt5 import QtGui
 
-from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Login_Window(object):
     def setupUi(self, Login_Window):
@@ -39,10 +40,14 @@ class Ui_Login_Window(object):
         self.login.setObjectName("login")
         self.test = QtWidgets.QPushButton(self.centralWidget)
         self.test.setGeometry(QtCore.QRect(130, 320, 114, 32))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.test.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.test.sizePolicy().hasHeightForWidth(),
+        )
         self.test.setSizePolicy(sizePolicy)
         self.test.setObjectName("test")
         self.mylab = QtWidgets.QLabel(self.centralWidget)
@@ -77,4 +82,3 @@ class Ui_Login_Window(object):
         self.test.setText(_translate("Login_Window", "test"))
         self.mylab.setText(_translate("Login_Window", "0"))
         self.change.setText(_translate("Login_Window", "change"))
-

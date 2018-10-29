@@ -1,6 +1,9 @@
+from PyQt5 import QtCore
+
 import buddingEmotion
 import mydata as database
-from PyQt5 import QtCore, QtGui, QtWidgets
+# from PyQt5 import QtGui
+# from PyQt5 import QtWidgets
 
 
 class EventController:

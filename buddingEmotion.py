@@ -1,7 +1,9 @@
-from PyQt5.QtCore import QThread, pyqtSignal
+import os
+
 import cv2
 import requests
-import os
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import QThread
 
 
 class EmotionThread(QThread):
@@ -21,20 +23,27 @@ class EmotionThread(QThread):
 
         subscription_key = "9c2a662ceba54c96902f6b78430f01bb"
 
-        emotion_recognition_url = "https://eastus.api.cognitive.microsoft.com/face/v1.0/detect"
+        emotion_recognition_url = "https://eastus.api.cognitive.\
+                    microsoft.com/face/v1.0/detect"
 
         params = {
             'returnFaceId': 'true',
             'returnFaceLandmarks': 'false',
-            'returnFaceAttributes': 'emotion'
+            'returnFaceAttributes': 'emotion',
         }
         cap.release()
         cv2.imwrite(self.TEMP_FILENAME, frame)
         with open(self.TEMP_FILENAME, 'rb') as f:
             image_data = f.read()
 
-        headers = {'Ocp-Apim-Subscription-Key': subscription_key, "Content-Type": "application/octet-stream"}
-        response = requests.post(emotion_recognition_url, headers=headers, params=params, data=image_data)
+        headers = {
+            'Ocp-Apim-Subscription-Key': subscription_key,
+            "Content-Type": "application/octet-stream",
+        }
+        response = requests.post(
+            emotion_recognition_url, headers=headers,
+            params=params, data=image_data,
+        )
         response.raise_for_status()
         analysis = response.json()
         os.remove(self.TEMP_FILENAME)
@@ -60,8 +69,8 @@ class BuddingEmotion:
                 self.controller.onSuccessEvent()
             else:
                 self.controller.onFailEvent()
-        except:
-            print("error occur, fail")
+        except Exception as e:
+            print("error occur, fail, Exception: ", e)
 
     # user click button again
     def stopRecog(self):
