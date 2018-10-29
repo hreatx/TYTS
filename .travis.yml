@@ -17,3 +17,5 @@ install:
 
 script:
  - pyinstaller main.py
+ - python unittest/testBuddingWidget.py
+ - python unittest/testEventController.py
