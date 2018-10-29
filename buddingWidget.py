@@ -1,8 +1,8 @@
 import os
 
 from PyQt5.QtCore import QSize
-from PyQt5.QtGui import QHBoxLayout
 from PyQt5.QtGui import QMovie
+from PyQt5.QtWidgets import QHBoxLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
 
