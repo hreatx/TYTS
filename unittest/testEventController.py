@@ -1,8 +1,8 @@
 import unittest
-from eventController import EventController
+import eventController
 
 
-class EventControllerMocker(EventController):
+class EventControllerMocker(eventController.EventController):
     """
     Interit the EventController in order to mock it without calling the database.
     Inspired by: https://stackoverflow.com/questions/17836939/mocking-init-for-unittesting

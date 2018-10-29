@@ -1,8 +1,8 @@
 import unittest
-from buddingWidget import BuddingWidget
+import buddingWidget
 
 
-class BuddingWidgetMock(BuddingWidget):
+class BuddingWidgetMock(buddingWidget.BuddingWidget):
 
     def __init__(self):
         self.totalMovieSize = 0
