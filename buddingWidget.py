@@ -1,11 +1,13 @@
-import sys
 import os
 
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from PyQt5.QtCore import QSize
+from PyQt5.QtGui import QMovie
+from PyQt5.QtWidgets import QHBoxLayout
+from PyQt5.QtWidgets import QLabel
+from PyQt5.QtWidgets import QWidget
 
 dir = os.path.dirname(os.path.abspath(__file__))
+
 
 class BuddingWidget(QWidget):
 
