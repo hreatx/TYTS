@@ -14,10 +14,12 @@ install:
   - pip install requests
   - pip install pyinstaller
   - pip install --upgrade setuptools
-  - pip install pylint
+  - sudo apt-get install pylint
 
 script:
  - pyinstaller main.py
+ - python buddingWidget.py
+ - python buddingController.py
  - python unittest/testBuddingWidget.py
  - python unittest/testEventController.py
- -
+ - pylint ..
