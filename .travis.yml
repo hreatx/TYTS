@@ -22,4 +22,4 @@ script:
  - python buddingController.py
  - python unittest/testBuddingWidget.py
  - python unittest/testEventController.py
- - pylint ..
+ - pylint ../TYTS
