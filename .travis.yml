@@ -3,7 +3,7 @@ python:
   - "3.6"
   # PyPy versions
 
-# command to install dependencies
+# command to install dependencies .
 
 
 install:
@@ -15,9 +15,14 @@ install:
   - pip3 install pyinstaller
   - pip3 install --upgrade setuptools
   - sudo apt-get install pylint
+  - pip3 install coverage
 
 script:
  - pyinstaller main.py
  - python3 testBuddingWidget.py
  - python3 testEventController.py
+ - coverage run testBuddingWidget.py
+ - coverage report
+ - coverage run testEventController.py
+ - coverage report
  - pylint ../TYTS
