@@ -21,6 +21,6 @@ script:
  - pyinstaller main.py
  - python3 testBuddingWidget.py
  - python3 testEventController.py
- - python3 coverage run testBuddingWidget.py
- - python3 coverage run testEventController.py
+ - coverage run testBuddingWidget.py
+ - coverage run testEventController.py
  - pylint ../TYTS
