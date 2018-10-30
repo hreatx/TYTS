@@ -24,5 +24,5 @@ script:
  - coverage run testBuddingWidget.py
  - coverage report
  - coverage run testEventController.py
-  - coverage report
+ - coverage report
  - pylint ../TYTS
