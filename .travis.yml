@@ -22,5 +22,7 @@ script:
  - python3 testBuddingWidget.py
  - python3 testEventController.py
  - coverage run testBuddingWidget.py
+ - coverage report
  - coverage run testEventController.py
+  - coverage report
  - pylint ../TYTS
