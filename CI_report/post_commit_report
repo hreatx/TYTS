@@ -17,17 +17,17 @@ Build History
 
 Pull Requests
 
-Build #13
+Build #19
  More options
  master unit test
- Commit 38e45b1
- Compare f518a68..38e45b1
+ Commit 44b8499
+ Compare a8e3e88..44b8499
  Branch master
  Ruolin Jia avatar Ruolin Jia
 
- #13 failed
- Ran for 1 min 23 sec
- less than a minute ago
+ #19 failed
+ Ran for 1 min 21 sec
+ about a minute ago
  Restart build
  Python: 3.6
 Job log
@@ -36,11 +36,63 @@ View config
   Remove log  Raw log
 worker_info
 Worker information
-hostname: b8165c3e-2ae6-4eee-9c89-97f7d439a544@1.production-2-worker-org-gce-xg23
+hostname: 172c66d9-f52c-47cc-9a78-dfa5be0231f7@1.production-1-worker-org-gce-nb8d
 version: v4.5.2 https://github.com/travis-ci/worker/tree/0e6ddd94961e79b28a19978d99b94505a35bb9db
-instance: travis-job-70c90c83-4a80-4f83-ac2c-55f9b4892405 travis-ci-garnet-trusty-1512502259-986baf0 (via amqp)
-startup: 10.563673812s
-check version
+instance: travis-job-d2ac01a3-29bd-4d69-8091-fdb42d28b651 travis-ci-garnet-trusty-1512502259-986baf0 (via amqp)
+startup: 10.436956153s
+system_info
+Build system information
+Build language: python
+Build group: stable
+Build dist: trusty
+Build id: 448516885
+Job id: 448516888
+Runtime kernel version: 4.4.0-101-generic
+travis-build version: 495c0af19
+Build image provisioning date and time
+Tue Dec  5 19:58:13 UTC 2017
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Cookbooks Version
+7c2c6a6 https://github.com/travis-ci/travis-cookbooks/tree/7c2c6a6
+git version
+git version 2.15.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+docker version
+Client:
+ Version:      17.09.0-ce
+ API version:  1.32
+ Go version:   go1.8.3
+ Git commit:   afdb6d4
+ Built:        Tue Sep 26 22:42:38 2017
+ OS/Arch:      linux/amd64
+Server:
+ Version:      17.09.0-ce
+ API version:  1.32 (minimum version 1.12)
+ Go version:   go1.8.3
+ Git commit:   afdb6d4
+ Built:        Tue Sep 26 22:41:20 2017
+ OS/Arch:      linux/amd64
+ Experimental: false
+clang version
+clang version 5.0.0 (tags/RELEASE_500/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/clang-5.0.0/bin
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+shellcheck version
 0.4.6
 shfmt version
 v2.0.0
@@ -155,7 +207,128 @@ Environment variables to remove:
 	FPATH
 	PERL5DB
 	PERL5OPT
-erm_save
+	PERL5LIB
+	PERLLIB
+	PERLIO_DEBUG
+	JAVA_TOOL_OPTIONS
+	SHELLOPTS
+	GLOBIGNORE
+	PS4
+	BASH_ENV
+	ENV
+	TERMCAP
+	TERMPATH
+	TERMINFO_DIRS
+	TERMINFO
+	_RLD*
+	LD_*
+	PATH_LOCALE
+	NLSPATH
+	HOSTALIASES
+	RES_OPTIONS
+	LOCALDOMAIN
+	CDPATH
+	IFS
+Environment variables to preserve:
+	JAVA_HOME
+	TRAVIS
+	CI
+	DEBIAN_FRONTEND
+	XAUTHORIZATION
+	XAUTHORITY
+	PS2
+	PS1
+	PATH
+	LS_COLORS
+	KRB5CCNAME
+	HOSTNAME
+	HOME
+	DISPLAY
+	COLORS
+Locale to use while parsing sudoers: C
+Directory in which to store input/output logs: /var/log/sudo-io
+File in which to store the input/output log: %{seq}
+Add an entry to the utmp/utmpx file when allocating a pty
+PAM service name to use
+PAM service name to use for login shells
+Create a new PAM session for the command to run in
+Maximum I/O log sequence number: 0
+Local IP address and netmask pairs:
+	10.240.0.28/255.255.255.255
+	172.17.0.1/255.255.0.0
+Sudoers I/O plugin version 1.8.9p5
+gzip version
+gzip 1.6
+Copyright (C) 2007, 2010, 2011 Free Software Foundation, Inc.
+Copyright (C) 1993 Jean-loup Gailly.
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+Written by Jean-loup Gailly.
+zip version
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip
+as of above date; see http://www.info-zip.org/ for other sites.
+Compiled with gcc 4.8.2 for Unix (Linux ELF) on Oct 21 2013.
+Zip special compilation options:
+	USE_EF_UT_TIME       (store Universal Time)
+	BZIP2_SUPPORT        (bzip2 library version 1.0.6, 6-Sept-2010)
+	    bzip2 code and library copyright (c) Julian R Seward
+	    (See the bzip2 license for terms of use)
+	SYMLINK_SUPPORT      (symbolic links supported)
+	LARGE_FILE_SUPPORT   (can read and write large files on file system)
+	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+Encryption notice:
+	The encryption code of this program is not copyrighted and is
+	put in the public domain.  It was originally written in Europe
+	and, to the best of our knowledge, can be freely distributed
+	in both source and object forms from any country, including
+	the USA under License Exception TSU of the U.S. Export
+	Administration Regulations (section 740.13(e)) of 6 June 2002.
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+vim version
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:43:18)
+Included patches: 1-52
+Extra patches: 8.0.0056
+Modified by pkg-vim-maintainers@lists.alioth.debian.org
+Compiled by buildd@
+Huge version without GUI.  Features included (+) or not (-):
++acl             +farsi           +mouse_netterm   +syntax
++arabic          +file_in_path    +mouse_sgr       +tag_binary
++autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
+-balloon_eval    +float           +mouse_urxvt     -tag_any_white
+-browse          +folding         +mouse_xterm     -tcl
+++builtin_terms  -footer          +multi_byte      +terminfo
++byte_offset     +fork()          +multi_lang      +termresponse
++cindent         +gettext         -mzscheme        +textobjects
+-clientserver    -hangul_input    +netbeans_intg   +title
+-clipboard       +iconv           +path_extra      -toolbar
++cmdline_compl   +insert_expand   -perl            +user_commands
++cmdline_hist    +jumplist        +persistent_undo +vertsplit
++cmdline_info    +keymap          +postscript      +virtualedit
++comments        +langmap         +printer         +visual
++conceal         +libcall         +profile         +visualextra
++cryptv          +linebreak       +python          +viminfo
++cscope          +lispindent      -python3         +vreplace
++cursorbind      +listcmds        +quickfix        +wildignore
++cursorshape     +localmap        +reltime         +wildmenu
++dialog_con      -lua             +rightleft       +windows
++diff            +menu            -ruby            +writebackup
++digraphs        +mksession       +scrollbind      -X11
+-dnd             +modify_fname    +signs           -xfontset
+-ebcdic          +mouse           +smartindent     -xim
++emacs_tags      -mouseshape      -sniff           -xsmp
++eval            +mouse_dec       +startuptime     -xterm_clipboard
++ex_extra        +mouse_gpm       +statusline      -xterm_save
 +extra_search    -mouse_jsbterm   -sun_workshop    -xpm
    system vimrc file: "$VIM/vimrc"
      user vimrc file: "$HOME/.vimrc"
@@ -251,105 +424,106 @@ Pre-installed Ruby versions0m
 ruby-2.2.7
 ruby-2.3.4
 ruby-2.4.1
+Network availability confirmed.
 Setting APT mirror in /etc/apt/sources.list: http://us-east-1.ec2.archive.ubuntu.com/ubuntu/
 git.checkout
-0.80s$ git clone --depth=50 --branch=master https://github.com/burnmg/TYTS.git burnmg/TYTS
+0.64s$ git clone --depth=50 --branch=master https://github.com/burnmg/TYTS.git burnmg/TYTS
 Cloning into 'burnmg/TYTS'...
-remote: Enumerating objects: 153, done.
-remote: Counting objects: 100% (153/153), done.
-remote: Compressing objects: 100% (102/102), done.
-remote: Total 153 (delta 66), reused 135 (delta 48), pack-reused 0
-Receiving objects: 100% (153/153), 919.05 KiB | 3.52 MiB/s, done.
-Resolving deltas: 100% (66/66), done.
+remote: Enumerating objects: 189, done.
+remote: Counting objects: 100% (189/189)   remote: Counting objects: 100% (189/189), done.
+remote: Compressing objects: 100% (126/126)   remote: Compressing objects: 100% (126/126), done.
+Receiving objects:  53% (101/189)   remote: Total 189 (delta 85), reused 162 (delta 58), pack-reused 0
+Receiving objects: 100% (189/189)   Receiving objects: 100% (189/189), 936.05 KiB | 8.59 MiB/s, done.
+Resolving deltas: 100% (85/85)   Resolving deltas: 100% (85/85), done.
 $ cd burnmg/TYTS
-$ git checkout -qf 38e45b19659688b123947beb0afcdbf6137fec04
+$ git checkout -qf 44b8499a5561880679f9e59126640b215332f82b
 0.01s$ source ~/virtualenv/python3.6/bin/activate
 $ python --version
 Python 3.6.3
 $ pip --version
 pip 9.0.1 from /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (python 3.6)
 install.1
-0.68s$ sudo apt-get install xvfb
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
+0.64s$ sudo apt-get install xvfb
+Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 50%Building dependency tree
+Reading state information... 0%Reading state information... Done
 xvfb is already the newest version (2:1.15.1-0ubuntu2.11).
 0 upgraded, 0 newly installed, 0 to remove and 259 not upgraded.
 install.2
-1.58s$ pip3 install xvfbwrapper
+1.56s$ pip3 install xvfbwrapper
 Collecting xvfbwrapper
   Downloading https://files.pythonhosted.org/packages/57/b6/4920eabda9b49630dea58745e79f9919aba6408d460afe758bf6e9b21a04/xvfbwrapper-0.2.9.tar.gz
 Building wheels for collected packages: xvfbwrapper
-  Running setup.py bdist_wheel for xvfbwrapper ... -done
+  Running setup.py bdist_wheel for xvfbwrapper ... done
   Stored in directory: /home/travis/.cache/pip/wheels/10/f2/61/cacfaf84b352c223761ea8d19616e3b5ac5c27364da72863f0
 Successfully built xvfbwrapper
 Installing collected packages: xvfbwrapper
 Successfully installed xvfbwrapper-0.2.9
 install.3
-18.45s$ pip3 install pyqt5
+15.76s$ pip3 install pyqt5
 Collecting pyqt5
   Downloading https://files.pythonhosted.org/packages/d4/bf/d884da8e2f7096d201c891d515eb6813a8e85df5eb6f5e12e867bf1d831c/PyQt5-5.11.3-5.11.2-cp35.cp36.cp37.cp38-abi3-manylinux1_x86_64.whl (117.8MB)
     100% |████████████████████████████████| 117.8MB 12kB/s
 Collecting PyQt5_sip<4.20,>=4.19.11 (from pyqt5)
   Downloading https://files.pythonhosted.org/packages/46/ba/30995383332fd46e4ee59a405bd75ae8ee099001360e7a680f1685985a49/PyQt5_sip-4.19.13-cp36-cp36m-manylinux1_x86_64.whl (66kB)
-    100% |████████████████████████████████| 71kB 9.6MB/s
+    91% |█████████████████████████████▍  | 61kB 31.0MB/s eta 0:00:01    100% |████████████████████████████████| 71kB 6.4MB/s
 Installing collected packages: PyQt5-sip, pyqt5
 Successfully installed PyQt5-sip-4.19.13 pyqt5-5.11.3
 install.4
-4.29s$ pip3 install opencv-python
+4.84s$ pip3 install opencv-python
 Collecting opencv-python
   Downloading https://files.pythonhosted.org/packages/18/7f/c836c44ab30074a8486e30f8ea6adc8e6ac02332851ab6cc069e2ac35b84/opencv_python-3.4.3.18-cp36-cp36m-manylinux1_x86_64.whl (25.0MB)
-    100% |████████████████████████████████| 25.0MB 60kB/s
+    100% |████████████████████████████████| 25.0MB 59kB/s
 Requirement already satisfied: numpy>=1.11.3 in /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (from opencv-python)
 Installing collected packages: opencv-python
 Successfully installed opencv-python-3.4.3.18
 install.5
-1.89s$ pip3 install requests
+1.95s$ pip3 install requests
 Collecting requests
   Downloading https://files.pythonhosted.org/packages/f1/ca/10332a30cb25b627192b4ea272c351bce3ca1091e541245cccbace6051d8/requests-2.20.0-py2.py3-none-any.whl (60kB)
-    100% |████████████████████████████████| 61kB 2.2MB/s
-Collecting certifi>=2017.4.17 (from requests)
-  Downloading https://files.pythonhosted.org/packages/56/9d/1d02dd80bc4cd955f98980f28c5ee2200e1209292d5f9e9cc8d030d18655/certifi-2018.10.15-py2.py3-none-any.whl (146kB)
-    100% |████████████████████████████████| 153kB 3.6MB/s
+    83% |██████████████████████████▉     | 51kB 2.1MB/s eta 0:00:01    100% |████████████████████████████████| 61kB 2.1MB/s
 Collecting idna<2.8,>=2.5 (from requests)
   Downloading https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl (58kB)
-    100% |████████████████████████████████| 61kB 4.0MB/s
-Collecting urllib3<1.25,>=1.21.1 (from requests)
-  Downloading https://files.pythonhosted.org/packages/8c/4b/5cbc4cb46095f369117dcb751821e1bef9dd86a07c968d8757e9204c324c/urllib3-1.24-py2.py3-none-any.whl (117kB)
-    100% |████████████████████████████████| 122kB 4.0MB/s
+    87% |████████████████████████████▏   | 51kB 4.2MB/s eta 0:00:01    100% |████████████████████████████████| 61kB 3.5MB/s
 Collecting chardet<3.1.0,>=3.0.2 (from requests)
   Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
-    100% |████████████████████████████████| 143kB 3.9MB/s
-Installing collected packages: certifi, idna, urllib3, chardet, requests
+    99% |████████████████████████████████| 133kB 4.7MB/s eta 0:00:01[K    100% |████████████████████████████████| 143kB 3.7MB/s
+Collecting urllib3<1.25,>=1.21.1 (from requests)
+  Downloading https://files.pythonhosted.org/packages/8c/4b/5cbc4cb46095f369117dcb751821e1bef9dd86a07c968d8757e9204c324c/urllib3-1.24-py2.py3-none-any.whl (117kB)
+    95% |██████████████████████████████▋ | 112kB 4.8MB/s eta 0:00:01    100% |████████████████████████████████| 122kB 3.8MB/s
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading https://files.pythonhosted.org/packages/56/9d/1d02dd80bc4cd955f98980f28c5ee2200e1209292d5f9e9cc8d030d18655/certifi-2018.10.15-py2.py3-none-any.whl (146kB)
+    97% |███████████████████████████████▍| 143kB 5.7MB/s eta 0:00:01    100% |████████████████████████████████| 153kB 4.1MB/s
+Installing collected packages: idna, chardet, urllib3, certifi, requests
 Successfully installed certifi-2018.10.15 chardet-3.0.4 idna-2.7 requests-2.20.0 urllib3-1.24
 install.6
-6.14s$ pip3 install pyinstaller
+6.34s$ pip3 install pyinstaller
 Collecting pyinstaller
   Downloading https://files.pythonhosted.org/packages/03/32/0e0de593f129bf1d1e77eed562496d154ef4460fd5cecfd78612ef39a0cc/PyInstaller-3.4.tar.gz (3.5MB)
-    100% |████████████████████████████████| 3.5MB 417kB/s
+    100% |████████████████████████████████| 3.5MB 409kB/s
 Requirement already satisfied: setuptools in /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages (from pyinstaller)
 Collecting pefile>=2017.8.1 (from pyinstaller)
   Downloading https://files.pythonhosted.org/packages/ed/cc/157f20038a80b6a9988abc06c11a4959be8305a0d33b6d21a134127092d4/pefile-2018.8.8.tar.gz (62kB)
-    100% |████████████████████████████████| 71kB 9.2MB/s
+    98% |███████████████████████████████▌| 61kB 32.7MB/s eta 0:00:01    100% |████████████████████████████████| 71kB 10.0MB/s
 Collecting macholib>=1.8 (from pyinstaller)
   Downloading https://files.pythonhosted.org/packages/41/f1/6d23e1c79d68e41eb592338d90a33af813f98f2b04458aaf0b86908da2d8/macholib-1.11-py2.py3-none-any.whl
 Collecting altgraph (from pyinstaller)
   Downloading https://files.pythonhosted.org/packages/0a/cc/646187eac4b797069e2e6b736f14cdef85dbe405c9bfc7803ef36e4f62ef/altgraph-0.16.1-py2.py3-none-any.whl
 Collecting future (from pefile>=2017.8.1->pyinstaller)
   Downloading https://files.pythonhosted.org/packages/85/aa/ba2e24dcb889d7e98733f87515d80b3512418b80ba79d82d2ddcd43fadf3/future-0.17.0.tar.gz (827kB)
-    100% |████████████████████████████████| 829kB 1.6MB/s
+    98% |███████████████████████████████▊| 819kB 22.9MB/s eta 0:00:01    100% |████████████████████████████████| 829kB 1.7MB/s
 Building wheels for collected packages: pyinstaller, pefile, future
-  Running setup.py bdist_wheel for pyinstaller ... \\done
+  Running setup.py bdist_wheel for pyinstaller ... --done
   Stored in directory: /home/travis/.cache/pip/wheels/09/ee/0a/94ef5d39074625f49e2e9cf97ac30cb7a87e1a7458ed195b8d
-  Running setup.py bdist_wheel for pefile ... -done
+  Running setup.py bdist_wheel for pefile ... done
   Stored in directory: /home/travis/.cache/pip/wheels/d9/c6/56/a372ee1059440413d55d13f78adfd16c8719553a5b4efdd0c1
-  Running setup.py bdist_wheel for future ... |done
+  Running setup.py bdist_wheel for future ... -done
   Stored in directory: /home/travis/.cache/pip/wheels/fc/5b/ec/2983c4a6e3692d1315f44d6480c6abdd8585d96471b431d6b4
 Successfully built pyinstaller pefile future
 Installing collected packages: future, pefile, altgraph, macholib, pyinstaller
 Successfully installed altgraph-0.16.1 future-0.17.0 macholib-1.11 pefile-2018.8.8 pyinstaller-3.4
 install.7
-1.74s$ pip3 install --upgrade setuptools
+1.80s$ pip3 install --upgrade setuptools
 Collecting setuptools
   Downloading https://files.pythonhosted.org/packages/82/a1/ba6fb41367b375f5cb653d1317d8ca263c636cff6566e2da1b0da716069d/setuptools-40.5.0-py2.py3-none-any.whl (569kB)
     100% |████████████████████████████████| 573kB 1.9MB/s
@@ -359,10 +533,10 @@ Installing collected packages: setuptools
       Successfully uninstalled setuptools-38.2.4
 Successfully installed setuptools-40.5.0
 install.8
-3.57s$ sudo apt-get install pylint
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
+3.87s$ sudo apt-get install pylint
+Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 50%Building dependency tree
+Reading state information... 0%Reading state information... Done
 The following additional packages will be installed:
   python-astroid python-egenix-mxdatetime python-egenix-mxtools
   python-logilab-common python-tk
@@ -376,15 +550,15 @@ The following NEW packages will be installed:
 0 upgraded, 6 newly installed, 0 to remove and 259 not upgraded.
 Need to get 730 kB of archives.
 After this operation, 8,644 kB of additional disk space will be used.
-Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-logilab-common all 0.61.0-1 [411 kB]
-Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-astroid all 1.0.1-1 [48.5 kB]
-Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 pylint all 1.1.0-1 [106 kB]
-Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxtools amd64 3.2.7-1build1 [75.1 kB]
-Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxdatetime amd64 3.2.7-1build1 [66.7 kB]
-Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-tk amd64 2.7.5-1ubuntu1 [23.6 kB]
-Fetched 730 kB in 0s (1,747 kB/s)
+            Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-logilab-common all 0.61.0-1 [411 kB]
+             Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-astroid all 1.0.1-1 [48.5 kB]
+             Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 pylint all 1.1.0-1 [106 kB]
+             Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxtools amd64 3.2.7-1build1 [75.1 kB]
+             Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-egenix-mxdatetime amd64 3.2.7-1build1 [66.7 kB]
+             Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu trusty/main amd64 python-tk amd64 2.7.5-1ubuntu1 [23.6 kB]
+              Fetched 730 kB in 0s (1,685 kB/s)
 Selecting previously unselected package python-logilab-common.
-(Reading database ... 93695 files and directories currently installed.)
+(Reading database ... 100%(Reading database ... 93695 files and directories currently installed.)
 Preparing to unpack .../python-logilab-common_0.61.0-1_all.deb ...
 Unpacking python-logilab-common (0.61.0-1) ...
 Selecting previously unselected package python-astroid.
@@ -426,10 +600,17 @@ Wrote /usr/share/emacs24/site-lisp/pylint/pylint.elc
 Setting up python-egenix-mxtools (3.2.7-1build1) ...
 Setting up python-egenix-mxdatetime (3.2.7-1build1) ...
 Setting up python-tk (2.7.5-1ubuntu1) ...
-16.85s$ pyinstaller main.py
+install.9
+1.16s$ pip3 install coverage
+Collecting coverage
+  Downloading https://files.pythonhosted.org/packages/3d/a0/b12090c40e0b8196b973962ec71c1c541a6c04af58ba5ad85683b3de251a/coverage-4.5.1-cp36-cp36m-manylinux1_x86_64.whl (202kB)
+    95% |██████████████████████████████▊ | 194kB 5.3MB/s eta 0:00:01    100% |████████████████████████████████| 204kB 3.2MB/s
+Installing collected packages: coverage
+Successfully installed coverage-4.5.1
+17.35s$ pyinstaller main.py
 53 INFO: PyInstaller: 3.4
 53 INFO: Python: 3.6.3
-56 INFO: Platform: Linux-4.4.0-101-generic-x86_64-with-debian-jessie-sid
+55 INFO: Platform: Linux-4.4.0-101-generic-x86_64-with-debian-jessie-sid
 56 INFO: wrote /home/travis/build/burnmg/TYTS/main.spec
 58 INFO: UPX is not available.
 60 INFO: Extending PYTHONPATH with paths
@@ -437,65 +618,65 @@ Setting up python-tk (2.7.5-1ubuntu1) ...
 60 INFO: checking Analysis
 60 INFO: Building Analysis because Analysis-00.toc is non existent
 60 INFO: Initializing module dependency graph...
-62 INFO: Initializing module graph hooks...
+61 INFO: Initializing module graph hooks...
 63 INFO: Analyzing base_library.zip ...
-3811 INFO: running Analysis Analysis-00.toc
-3827 INFO: Caching module hooks...
-3832 INFO: Analyzing /home/travis/build/burnmg/TYTS/main.py
-3966 INFO: Processing pre-safe import module hook   urllib3.packages.six.moves
-5363 INFO: Loading module hooks...
-5363 INFO: Loading module hook "hook-cv2.py"...
-6255 INFO: Processing pre-find module path hook   distutils
-6255 INFO: distutils: retargeting to non-venv dir '/opt/python/3.6.3/lib/python3.6/distutils'
-7752 INFO: Processing pre-safe import module hook   setuptools.extern.six.moves
-8183 INFO: Processing pre-find module path hook   site
-8184 INFO: site: retargeting to fake-dir '/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/fake-modules'
-10453 INFO: Loading module hook "hook-distutils.py"...
-10458 INFO: Loading module hook "hook-certifi.py"...
-10459 INFO: Loading module hook "hook-lib2to3.py"...
-10466 INFO: Loading module hook "hook-PyQt5.QtGui.py"...
-10573 INFO: Loading module hook "hook-setuptools.py"...
-11149 INFO: Loading module hook "hook-xml.py"...
-11207 INFO: Loading module hook "hook-encodings.py"...
-11267 INFO: Loading module hook "hook-sysconfig.py"...
-11277 INFO: Loading module hook "hook-sqlite3.py"...
-11341 INFO: Loading module hook "hook-PyQt5.py"...
-11360 WARNING: Hidden import "sip" not found!
-11361 INFO: Loading module hook "hook-numpy.py"...
-11361 INFO: Loading module hook "hook-numpy.core.py"...
-11580 INFO: Loading module hook "hook-pkg_resources.py"...
-11786 INFO: Processing pre-safe import module hook   win32com
-12029 INFO: Loading module hook "hook-PyQt5.QtWidgets.py"...
-12089 INFO: Loading module hook "hook-pydoc.py"...
-12089 INFO: Loading module hook "hook-PyQt5.QtCore.py"...
-12145 INFO: Looking for ctypes DLLs
-12394 INFO: Analyzing run-time hooks ...
-12441 INFO: Including run-time hook 'pyi_rth_multiprocessing.py'
-12445 INFO: Including run-time hook 'pyi_rth_pkgres.py'
-12446 INFO: Including run-time hook 'pyi_rth_qt5.py'
-12464 INFO: Looking for dynamic libraries
-14548 INFO: Looking for eggs
-14548 INFO: Using Python library /opt/python/3.6.3/lib/libpython3.6m.so.1.0
-14562 INFO: Warnings written to /home/travis/build/burnmg/TYTS/build/main/warn-main.txt
-14643 INFO: Graph cross-reference written to /home/travis/build/burnmg/TYTS/build/main/xref-main.html
-14927 INFO: checking PYZ
-14927 INFO: Building PYZ because PYZ-00.toc is non existent
-14927 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz
-15925 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz completed successfully.
-15943 INFO: checking PKG
-15943 INFO: Building PKG because PKG-00.toc is non existent
-15943 INFO: Building PKG (CArchive) PKG-00.pkg
-15961 INFO: Building PKG (CArchive) PKG-00.pkg completed successfully.
-15962 INFO: Bootloader /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/bootloader/Linux-64bit/run
-15962 INFO: checking EXE
-15962 INFO: Building EXE because EXE-00.toc is non existent
-15962 INFO: Building EXE from EXE-00.toc
-15962 INFO: Appending archive to ELF section in EXE /home/travis/build/burnmg/TYTS/build/main/main
-15976 INFO: Building EXE from EXE-00.toc completed successfully.
-15978 INFO: checking COLLECT
-15978 INFO: Building COLLECT because COLLECT-00.toc is non existent
-15978 INFO: Building COLLECT COLLECT-00.toc
-16564 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+3803 INFO: running Analysis Analysis-00.toc
+3821 INFO: Caching module hooks...
+3825 INFO: Analyzing /home/travis/build/burnmg/TYTS/main.py
+3967 INFO: Processing pre-safe import module hook   urllib3.packages.six.moves
+5437 INFO: Loading module hooks...
+5437 INFO: Loading module hook "hook-cv2.py"...
+6369 INFO: Processing pre-find module path hook   distutils
+6369 INFO: distutils: retargeting to non-venv dir '/opt/python/3.6.3/lib/python3.6/distutils'
+7937 INFO: Processing pre-safe import module hook   setuptools.extern.six.moves
+8395 INFO: Processing pre-find module path hook   site
+8395 INFO: site: retargeting to fake-dir '/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/fake-modules'
+10788 INFO: Loading module hook "hook-distutils.py"...
+10794 INFO: Loading module hook "hook-certifi.py"...
+10795 INFO: Loading module hook "hook-lib2to3.py"...
+10803 INFO: Loading module hook "hook-PyQt5.QtGui.py"...
+10928 INFO: Loading module hook "hook-setuptools.py"...
+11600 INFO: Loading module hook "hook-xml.py"...
+11716 INFO: Loading module hook "hook-encodings.py"...
+11778 INFO: Loading module hook "hook-sysconfig.py"...
+11810 INFO: Loading module hook "hook-sqlite3.py"...
+11917 INFO: Loading module hook "hook-PyQt5.py"...
+11937 WARNING: Hidden import "sip" not found!
+11937 INFO: Loading module hook "hook-numpy.py"...
+11938 INFO: Loading module hook "hook-numpy.core.py"...
+12755 INFO: Loading module hook "hook-pkg_resources.py"...
+12966 INFO: Processing pre-safe import module hook   win32com
+13251 INFO: Loading module hook "hook-PyQt5.QtWidgets.py"...
+13310 INFO: Loading module hook "hook-pydoc.py"...
+13311 INFO: Loading module hook "hook-PyQt5.QtCore.py"...
+13362 INFO: Looking for ctypes DLLs
+13472 INFO: Analyzing run-time hooks ...
+13482 INFO: Including run-time hook 'pyi_rth_multiprocessing.py'
+13487 INFO: Including run-time hook 'pyi_rth_pkgres.py'
+13488 INFO: Including run-time hook 'pyi_rth_qt5.py'
+13504 INFO: Looking for dynamic libraries
+15254 INFO: Looking for eggs
+15254 INFO: Using Python library /opt/python/3.6.3/lib/libpython3.6m.so.1.0
+15267 INFO: Warnings written to /home/travis/build/burnmg/TYTS/build/main/warn-main.txt
+15345 INFO: Graph cross-reference written to /home/travis/build/burnmg/TYTS/build/main/xref-main.html
+15379 INFO: checking PYZ
+15379 INFO: Building PYZ because PYZ-00.toc is non existent
+15379 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz
+16352 INFO: Building PYZ (ZlibArchive) /home/travis/build/burnmg/TYTS/build/main/PYZ-00.pyz completed successfully.
+16371 INFO: checking PKG
+16371 INFO: Building PKG because PKG-00.toc is non existent
+16371 INFO: Building PKG (CArchive) PKG-00.pkg
+16388 INFO: Building PKG (CArchive) PKG-00.pkg completed successfully.
+16389 INFO: Bootloader /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyInstaller/bootloader/Linux-64bit/run
+16389 INFO: checking EXE
+16389 INFO: Building EXE because EXE-00.toc is non existent
+16389 INFO: Building EXE from EXE-00.toc
+16390 INFO: Appending archive to ELF section in EXE /home/travis/build/burnmg/TYTS/build/main/main
+16404 INFO: Building EXE from EXE-00.toc completed successfully.
+16406 INFO: checking COLLECT
+16406 INFO: Building COLLECT because COLLECT-00.toc is non existent
+16406 INFO: Building COLLECT COLLECT-00.toc
+17069 INFO: Building COLLECT COLLECT-00.toc completed successfully.
 The command "pyinstaller main.py" exited with 0.
 0.11s$ python3 testBuddingWidget.py
 0
@@ -510,7 +691,208 @@ The command "python3 testBuddingWidget.py" exited with 0.
 Ran 3 tests in 0.000s
 OK
 The command "python3 testEventController.py" exited with 0.
-1.00s$ pylint ../TYTS
+0.21s$ coverage run testBuddingWidget.py
+0
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+OK
+The command "coverage run testBuddingWidget.py" exited with 0.
+0.14s$ coverage report
+Name                                                                                Stmts   Miss  Cover
+-------------------------------------------------------------------------------------------------------
+buddingWidget.py                                                                       33     20    39%
+testBuddingWidget.py                                                                   25      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyQt5/__init__.py       0      0   100%
+-------------------------------------------------------------------------------------------------------
+TOTAL                                                                                  58     20    66%
+The command "coverage report" exited with 0.
+0.47s$ coverage run testEventController.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+OK
+The command "coverage run testEventController.py" exited with 0.
+3.56s$ coverage report
+Name                                                                                                              Stmts   Miss  Cover
+-------------------------------------------------------------------------------------------------------------------------------------
+buddingEmotion.py                                                                                                    53     37    30%
+eventController.py                                                                                                   32     17    47%
+mydata.py                                                                                                            98     85    13%
+testEventController.py                                                                                               22      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/PyQt5/__init__.py                                     0      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/certifi/__init__.py                                   2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/certifi/core.py                                      12      3    75%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/__init__.py                                  11      7    36%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/big5freq.py                                   3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/big5prober.py                                14      6    57%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/chardistribution.py                         117     83    29%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/charsetgroupprober.py                        70     61    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/charsetprober.py                             50     36    28%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/codingstatemachine.py                        27     18    33%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/compat.py                                    10      4    60%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/cp949prober.py                               14      6    57%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/enums.py                                     34      1    97%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/escprober.py                                 56     45    20%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/escsm.py                                     17      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/eucjpprober.py                               47     34    28%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/euckrfreq.py                                  3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/euckrprober.py                               14      6    57%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/euctwfreq.py                                  3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/euctwprober.py                               14      6    57%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/gb2312freq.py                                 3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/gb2312prober.py                              14      6    57%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/hebrewprober.py                              74     48    35%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/jisfreq.py                                    3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/jpcntx.py                                    80     61    24%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langbulgarianmodel.py                         5      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langcyrillicmodel.py                         13      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langgreekmodel.py                             5      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langhebrewmodel.py                            3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langthaimodel.py                              3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/langturkishmodel.py                           3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/latin1prober.py                              50     29    42%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/mbcharsetprober.py                           42     33    21%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/mbcsgroupprober.py                           14      3    79%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/mbcssm.py                                    41      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/sbcharsetprober.py                           73     60    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/sbcsgroupprober.py                           19      8    58%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/sjisprober.py                                47     34    28%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/universaldetector.py                        124    104    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/utf8prober.py                                41     29    29%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/chardet/version.py                                    2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/cv2/__init__.py                                       4      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/cv2/data/__init__.py                                  2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/idna/__init__.py                                      2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/idna/core.py                                        283    245    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/idna/idnadata.py                                      4      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/idna/intranges.py                                    29     24    17%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/idna/package_data.py                                  1      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/__config__.py                                  22     12    45%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/__init__.py                                    58      7    88%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/_distributor_init.py                            0      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/_globals.py                                    11      1    91%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/_import_tools.py                              226    204    10%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/add_newdocs.py                                278      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/compat/__init__.py                              8      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/compat/_inspect.py                             70     19    73%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/compat/py3k.py                                 78     53    32%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/__init__.py                               73      9    88%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/_internal.py                             396    314    21%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/_methods.py                               87     65    25%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/arrayprint.py                            410    337    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/defchararray.py                          356    230    35%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/einsumfunc.py                            311    298     4%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/fromnumeric.py                           277    215    22%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/function_base.py                          69     59    14%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/getlimits.py                             182     91    50%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/info.py                                    3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/machar.py                                187    178     5%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/memmap.py                                 98     82    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/numeric.py                               562    409    27%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/numerictypes.py                          388    113    71%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/records.py                               356    315    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/core/shape_base.py                            111     95    14%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/ctypeslib.py                                  187    144    23%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/fft/__init__.py                                 7      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/fft/fftpack.py                                131    106    19%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/fft/helper.py                                  86     65    24%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/fft/info.py                                     2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/__init__.py                                42      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/_datasource.py                            177    140    21%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/_iotools.py                               392    337    14%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/_version.py                                77     61    21%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/arraypad.py                               372    347     7%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/arraysetops.py                            143    131     8%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/arrayterator.py                            73     60    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/financial.py                              109     92    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/format.py                                 234    206    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/function_base.py                         1312   1211     8%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/index_tricks.py                           244    184    25%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/info.py                                     3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/mixins.py                                  62     13    79%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/nanfunctions.py                           226    200    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/npyio.py                                  762    712     7%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/polynomial.py                             399    336    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/scimath.py                                 55     35    36%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/shape_base.py                             183    157    14%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/stride_tricks.py                           60     49    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/twodim_base.py                            123    100    19%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/type_check.py                             104     81    22%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/ufunclike.py                               28     13    54%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/lib/utils.py                                  515    433    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/linalg/__init__.py                              6      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/linalg/info.py                                  2      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/linalg/linalg.py                              601    529    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/ma/__init__.py                                 11      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/ma/core.py                                   2420   1881    22%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/ma/extras.py                                  563    472    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/matrixlib/__init__.py                           6      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/matrixlib/defmatrix.py                        267    213    20%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/__init__.py                         10      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/_polybase.py                       316    235    26%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/chebyshev.py                       458    396    14%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/hermite.py                         417    362    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/hermite_e.py                       414    359    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/laguerre.py                        403    349    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/legendre.py                        411    357    13%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/polynomial.py                      340    289    15%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/polynomial/polyutils.py                        65     48    26%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/random/__init__.py                             13      1    92%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/random/info.py                                  3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/testing/__init__.py                             6      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/testing/decorators.py                          64     56    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/testing/nosetester.py                         167    134    20%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/testing/utils.py                              791    701    11%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/numpy/version.py                                      7      1    86%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/__init__.py                                 55     12    78%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/__version__.py                              10      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/_internal_utils.py                          16     12    25%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/adapters.py                                222    169    24%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/api.py                                      22     12    45%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/auth.py                                    174    141    19%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/certs.py                                     4      1    75%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/compat.py                                   38     13    66%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/cookies.py                                 238    177    26%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/exceptions.py                               35      6    83%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/hooks.py                                    15     11    27%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/models.py                                  446    374    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/packages.py                                  6      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/sessions.py                                279    228    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/status_codes.py                             15      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/structures.py                               39     19    51%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/requests/utils.py                                   442    376    15%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/__init__.py                                  33      8    76%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/_collections.py                             181    133    27%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/connection.py                               165    112    32%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/connectionpool.py                           314    254    19%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/contrib/__init__.py                           0      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/contrib/_appengine_environ.py                11      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py                        236    234     1%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/contrib/socks.py                             75     66    12%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/exceptions.py                                96     21    78%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/fields.py                                    69     56    19%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/filepost.py                                  43     30    30%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/packages/__init__.py                          3      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/packages/six.py                             444    208    53%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/__init__.py      11      6    45%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/poolmanager.py                              167    128    23%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/request.py                                   39     28    28%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/response.py                                 353    290    18%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/__init__.py                             10      0   100%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/connection.py                           66     44    33%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/queue.py                                14      5    64%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/request.py                              45     36    20%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/response.py                             35     29    17%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/retry.py                               150    102    32%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/ssl_.py                                146    113    23%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/timeout.py                              59     42    29%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/url.py                                 103     87    16%
+/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/urllib3/util/wait.py                                 77     59    23%
+-------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                             25194  19483    23%
+The command "coverage report" exited with 0.
+1.02s$ pylint ../TYTS
 No config file found, using default configuration
 ************* Module TYTS
 C:  1, 0: Missing module docstring (missing-docstring)
@@ -545,19 +927,19 @@ C: 20, 4: Invalid constant name "app" (invalid-name)
 C: 21, 4: Invalid constant name "mainWindow" (invalid-name)
 E: 22, 4: Instance of 'BuddingMainWindow' has no 'show' member (no-member)
 ************* Module TYTS.testBuddingWidget
-C: 15, 0: Line too long (105/80) (line-too-long)
-C: 33, 0: Line too long (101/80) (line-too-long)
-C: 36, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 16, 0: Line too long (105/80) (line-too-long)
+C: 34, 0: Line too long (102/80) (line-too-long)
+C: 37, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
 C:  1, 0: Invalid module name "testBuddingWidget" (invalid-name)
 C:  1, 0: Missing module docstring (missing-docstring)
 W:  4, 0: Relative import 'buddingWidget', should be 'TYTS.buddingWidget' (relative-import)
-C:  7, 0: Missing class docstring (missing-docstring)
-W:  9, 4: __init__ method from base class 'BuddingWidget' is not called (super-init-not-called)
-C: 23, 0: Missing class docstring (missing-docstring)
-C: 28, 4: Invalid method name "testHetNextMovie" (invalid-name)
-C: 28, 4: Missing method docstring (missing-docstring)
-W: 33,12: Unused variable 'i' (unused-variable)
-R: 23, 0: Too many public methods (46/20) (too-many-public-methods)
+C:  8, 0: Missing class docstring (missing-docstring)
+W: 10, 4: __init__ method from base class 'BuddingWidget' is not called (super-init-not-called)
+C: 24, 0: Missing class docstring (missing-docstring)
+C: 29, 4: Invalid method name "testHetNextMovie" (invalid-name)
+C: 29, 4: Missing method docstring (missing-docstring)
+W: 34,12: Unused variable 'i' (unused-variable)
+R: 24, 0: Too many public methods (46/20) (too-many-public-methods)
 ************* Module TYTS.mydata
 C:236, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
 C:237, 0: Unnecessary parens after u'print' keyword (superfluous-parens)
@@ -676,20 +1058,20 @@ W: 56, 8: Attribute 'horizontalLayout_4' defined outside __init__ (attribute-def
 W:143, 8: Attribute 'tailLayout' defined outside __init__ (attribute-defined-outside-init)
 W:141, 8: Attribute 'horizontalLayout_6' defined outside __init__ (attribute-defined-outside-init)
 ************* Module TYTS.testEventController
-C:  7, 0: Line too long (81/80) (line-too-long)
-C:  8, 0: Line too long (90/80) (line-too-long)
+C:  8, 0: Line too long (81/80) (line-too-long)
+C:  9, 0: Line too long (90/80) (line-too-long)
 C:  1, 0: Invalid module name "testEventController" (invalid-name)
 C:  1, 0: Missing module docstring (missing-docstring)
-W:  2, 0: Relative import 'eventController', should be 'TYTS.eventController' (relative-import)
-W: 10, 4: __init__ method from base class 'EventController' is not called (super-init-not-called)
-C: 14, 0: Missing class docstring (missing-docstring)
-C: 20, 4: Invalid method name "testOnSucessEvent" (invalid-name)
-C: 20, 4: Missing method docstring (missing-docstring)
-C: 25, 4: Invalid method name "testOnFailEvent1" (invalid-name)
-C: 25, 4: Missing method docstring (missing-docstring)
-C: 30, 4: Invalid method name "testOnFailEvent2" (invalid-name)
-C: 30, 4: Missing method docstring (missing-docstring)
-R: 14, 0: Too many public methods (48/20) (too-many-public-methods)
+W:  3, 0: Relative import 'eventController', should be 'TYTS.eventController' (relative-import)
+W: 12, 4: __init__ method from base class 'EventController' is not called (super-init-not-called)
+C: 16, 0: Missing class docstring (missing-docstring)
+C: 22, 4: Invalid method name "testOnSucessEvent" (invalid-name)
+C: 22, 4: Missing method docstring (missing-docstring)
+C: 27, 4: Invalid method name "testOnFailEvent1" (invalid-name)
+C: 27, 4: Missing method docstring (missing-docstring)
+C: 32, 4: Invalid method name "testOnFailEvent2" (invalid-name)
+C: 32, 4: Missing method docstring (missing-docstring)
+R: 16, 0: Too many public methods (48/20) (too-many-public-methods)
 ************* Module TYTS.buddingWidget
 C: 27, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
 C: 37, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
@@ -843,7 +1225,7 @@ R:  1, 0: Similar lines in 6 files
 ==TYTS.buddingMainWindow:45
 ==TYTS.login_window:42
         sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed
         )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -851,23 +1233,6 @@ R:  1, 0: Similar lines in 6 files
 Report
 ======
 588 statements analysed.
-Raw metrics
------------
-+----------+-------+------+---------+-----------+
-|type      |number |%     |previous |difference |
-+==========+=======+======+=========+===========+
-|code      |678    |77.75 |NC       |NC         |
-+----------+-------+------+---------+-----------+
-|docstring |107    |12.27 |NC       |NC         |
-+----------+-------+------+---------+-----------+
-|comment   |27     |3.10  |NC       |NC         |
-+----------+-------+------+---------+-----------+
-|empty     |60     |6.88  |NC       |NC         |
-+----------+-------+------+---------+-----------+
-External dependencies
----------------------
-::
-    requests (TYTS.buddingEmotion)
 Messages by category
 --------------------
 +-----------+-------+---------+-----------+
@@ -977,6 +1342,23 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |function |8      |NC         |NC         |0.00        |25.00    |
 +---------+-------+-----------+-----------+------------+---------+
+Raw metrics
+-----------
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |676    |77.61 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |107    |12.28 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |27     |3.10  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |61     |7.00  |NC       |NC         |
++----------+-------+------+---------+-----------+
+External dependencies
+---------------------
+::
+    requests (TYTS.buddingEmotion)
 Duplication
 -----------
 +-------------------------+------+---------+-----------+
@@ -984,7 +1366,7 @@ Duplication
 +=========================+======+=========+===========+
 |nb duplicated lines      |30    |NC       |NC         |
 +-------------------------+------+---------+-----------+
-|percent duplicated lines |3.155 |NC       |NC         |
+|percent duplicated lines |3.158 |NC       |NC         |
 +-------------------------+------+---------+-----------+
 The command "pylint ../TYTS" exited with 31.
 Done. Your build exited with 1.
@@ -994,15 +1376,18 @@ Search all repositories
 
 My Repositories
 
- burnmg/TYTS  13
- Duration: 1 min 23 sec
+ burnmg/TYTS  19
+ Duration: 1 min 21 sec
 
- Finished: less than a minute ago
+ Finished: about a minute ago
 
  burnmg/SmileDetection  12
  Duration: 15 sec
 
- Finished: a day ago
+ Finished: 3 days ago
+
+ hreatx/TYTS
+ Duration: -
 
 ©TRAVIS CI, GMBH
 Rigaer Straße 8
