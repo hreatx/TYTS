@@ -15,9 +15,12 @@ install:
   - pip3 install pyinstaller
   - pip3 install --upgrade setuptools
   - sudo apt-get install pylint
+  - pip3 install coverage
 
 script:
  - pyinstaller main.py
  - python3 testBuddingWidget.py
  - python3 testEventController.py
+ - python3 coverage run testBuddingWidget.py
+ - python3 coverage run testEventController.py
  - pylint ../TYTS
