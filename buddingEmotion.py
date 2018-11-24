@@ -4,6 +4,7 @@ import cv2
 import requests
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtCore import QThread
+import json
 
 
 class EmotionThread(QThread):
@@ -20,8 +21,10 @@ class EmotionThread(QThread):
     def run(self):
         cap = cv2.VideoCapture(0)
         ret, frame = cap.read()
+        with open("secret.json") as f:
+            secret_file = json.load(f)
 
-        subscription_key = "9c2a662ceba54c96902f6b78430f01bb"
+        subscription_key = secret_file["key"]
 
         emotion_recognition_url = "https://eastus.api.cognitive.microsoft.com/face/v1.0/detect"
 
