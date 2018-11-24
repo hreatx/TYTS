@@ -26,7 +26,18 @@ class TestBuddingWidget(unittest.TestCase):
     def setUp(self):
         self.widget = BuddingWidgetMock()
 
-    def testHetNextMovie(self):
+    def testNextImage1(self): # equivalent class
+        self.widget.getNextMovie()
+        self.widget.totalMovieSize = 6
+        self.widget.currentMovieIndex = 0
+
+
+        self.widget.getNextMovie()
+
+        print(self.widget.currentMovieIndex)
+        self.assertEqual(self.widget.currentMovieIndex, 1)
+
+    def testNextImage2(self): # equivalent class B
         self.widget.getNextMovie()
         self.widget.totalMovieSize = 6
         self.widget.currentMovieIndex = 0
@@ -36,6 +47,8 @@ class TestBuddingWidget(unittest.TestCase):
 
         print(self.widget.currentMovieIndex)
         self.assertEqual(self.widget.currentMovieIndex, 0)
+
+
 
 
 if __name__ == "__main__":
