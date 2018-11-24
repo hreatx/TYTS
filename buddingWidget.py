@@ -5,26 +5,28 @@ from PyQt5.QtGui import QMovie
 from PyQt5.QtWidgets import QHBoxLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
-import mydata
 
 dir = os.path.dirname(os.path.abspath(__file__))
 
 
 class BuddingWidget(QWidget):
+    def on_level_update(self, level):
+        print('budding widget update')
+
+    def on_logout(self, level):
+        print('budding widget logout')
 
     def __init__(self, parent, controller):
         super(BuddingWidget, self).__init__(parent)
-
-        self.currentMovieIndex = 0
+        self.controller = controller
+        self.currentMovieIndex = -1
         self.totalMovieSize = 5
 
         self.layout = QHBoxLayout(self)
         self.movieLabel = QLabel(self)
-        self.controller = controller
         self.showNextMovie()
         self.layout.addWidget(self.movieLabel)
         self.setLayout(self.layout)
-
 
     def mousePressEvent(self, event):
         print("pressed")
@@ -39,14 +41,9 @@ class BuddingWidget(QWidget):
     def mouseReleaseEvent(self, event):
         print("released")
 
-    # def getNextMovie(self):
-    #     self.currentMovieIndex += 1
-    #     if self.currentMovieIndex == self.totalMovieSize:
-    #         self.currentMovieIndex = 0
-    #     filename = "test_" + str(self.currentMovieIndex) + ".gif"
-    #     return QMovie(os.path.join(dir, filename))
-
     def getNextMovie(self):
-        file_path_list = mydata.getApperance(self.controller.level)
-        filename = file_path_list(self.currentMovieIndex % len(file_path_list))
+        self.currentMovieIndex += 1
+        if self.currentMovieIndex == self.totalMovieSize:
+            self.currentMovieIndex = 0
+        filename = "test_" + str(self.currentMovieIndex) + ".gif"
         return QMovie(os.path.join(dir, filename))

@@ -30,7 +30,8 @@ def initDB():
         DROP TABLE IF EXISTS Items;
         DROP TABLE IF EXISTS Purchase;
         DROP TABLE IF EXISTS Gallery;
-        
+        DROP TABLE IF EXISTS Smiles;
+
         create table Users(
             uid text,
             password text,
@@ -62,6 +63,11 @@ def initDB():
             path text,
             tag integer
         );
+
+        create table Smiles(
+            uid text,
+            time text
+        )
         """)
     conn.commit()
     c.close()
@@ -116,7 +122,7 @@ def register(account,pwd):
     c = conn.cursor()
     t = (account, pwd)
     c.execute("""
-    INSERT INTO Users VALUES (?,?,0,0,0)
+    INSERT INTO Users VALUES (?,?,0,0,1)
     """, t)
     t = (account,)
     ex = c.execute("""
@@ -233,10 +239,60 @@ def record(account,start,end):
     c = conn.cursor()
     t = (account,start,end)
     c.execute("""
-    Insert into records Values(?,?,?)
+    INSERT INTO records VALUES (?,?,?)
     """,t)
     conn.commit()
+    t = (account,end,)
+    ex = c.execute("""
+            SELECT EXISTS(
+                SELECT * FROM Records
+                WHERE uid = ? AND end = ?
+            )
+    """, t)
+    conn.commit()
+    success = ex.fetchone()
+    success = success[0]
     c.close()
+    return bool(success)
+
+
+def lastLogout(account):
+    # return the time of last logout
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+
+def addSmile(account,time):
+    # record the time of smiles
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+    t = (account,time,)
+    c.execute("""
+    INSERT INTO Smiles VALUES (?,?)
+    """,t)
+    conn.commit()
+    ex = c.execute("""
+            SELECT EXISTS(
+                SELECT * FROM Smiles
+                WHERE uid = ? AND  time = ?
+            )
+    """, t)
+    conn.commit()
+    success = ex.fetchone()
+    success = success[0]
+    c.close()
+    return bool(success)
+ 
+def getSmiles(account):
+    # return a list of records of smiles
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+    t = (account,)
+    c.execute("""
+    SELECT COUNT(*) FROM Smiles
+    WHERE uid = ?
+    """,t)
+    count = c.fetchone()[0]
+    return count
 
 
 if __name__ == '__main__':
@@ -251,4 +307,7 @@ if __name__ == '__main__':
     print(login('yty','123456'))
     print(login('yty','123'))
     print(getItems())
+    record('yty','2018-11-22 12:00','2018-11-22 12:05')
+    print(addSmile('yty','2018-11-24'))
+    print(getSmiles('yty'))
     
