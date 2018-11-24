@@ -6,6 +6,8 @@ from PyQt5.QtWidgets import QHBoxLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
 
+import mydata
+
 dir = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -42,8 +44,8 @@ class BuddingWidget(QWidget):
         print("released")
 
     def getNextMovie(self):
+        file_path_list = mydata.getApperance(self.controller.level)
+        filename = file_path_list[self.currentMovieIndex % len(file_path_list)]
         self.currentMovieIndex += 1
-        if self.currentMovieIndex == self.totalMovieSize:
-            self.currentMovieIndex = 0
-        filename = "test_" + str(self.currentMovieIndex) + ".gif"
+
         return QMovie(os.path.join(dir, filename))
