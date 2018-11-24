@@ -23,6 +23,7 @@ script:
  - python3 testEventController.py
  - coverage run testBuddingWidget.py
  - coverage report
+ - rm .coverage
  - coverage run testEventController.py
  - coverage report
 #  - pylint ../TYTS
