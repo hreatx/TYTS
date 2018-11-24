@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import glob
-import os
-import sqlite3
 """
 Created on Thu Oct 25 12:42:17 2018
 
@@ -19,32 +16,34 @@ Database Content:
         energy      INTEGER
         level       INTEGER
         PrimaryKey(uid)
-
+    
     Table Items:
         iid         INTEGE
         iname       CHAR[20]
         price       INTEGER
         icon        CHAR[20]
         PrimaryKey(iid)
-
+    
     Table Purchase:
         uid         CHAR[10]
         iid         INTEGER
         time        DATE
         num         INTEGER
         PrimaryKey(time)
-
+    
     Table Gallery:
         sid         INTEGER
         path        CHAR[20]
 """
-# from PyQt5 import QtCore
-# from PyQt5 import QtGui
-# from pyQt5 import QtSql
+#from PyQt5 import QtCore
+#from PyQt5 import QtGui
+#from pyQt5 import QtSql
+import sqlite3
+import os
+import glob
 
 STICKERPATH = "sticker/"
 ICONPATH = "icon/"
-
 
 def initDB():
     # This is a method called only at the first building
@@ -57,7 +56,7 @@ def initDB():
         DROP TABLE IF EXISTS Items;
         DROP TABLE IF EXISTS Purchase;
         DROP TABLE IF EXISTS Gallery;
-
+        
         create table Users(
             uid text,
             password text,
@@ -66,38 +65,60 @@ def initDB():
             level integer
         );
 
+        create table Records(
+            uid text,
+            start text,
+            end text
+        )
+
         create table Items(
-            iid integer,
             iname text,
             price integer,
-            icon text
+            energy integer,
         );
 
         create table Purchase(
             time text,
             uid text,
-            iid integer,
+            iname text,
             num integer
         );
 
         create table Gallery(
-            path text
+            path text,
+            tag text
         );
-        """
-    )
+        """)
     conn.commit()
     c.close()
     c = conn.cursor()
-    stickers = []
+    stickers = [] 
     cwd = os.path.dirname(os.path.abspath(__file__))
-    cwdstck = cwd+'/sticker/*.gif'
-    for i, f in enumerate(glob.glob(cwdstck)):
-        stickers.append((f,))
-    c.executemany(
-        """
-    INSERT INTO Gallery VALUES (?)
-    """, stickers,
-    )
+    cwdsad = cwd+'/sticker/sad/*.gif'
+    cwdnat = cwd+'/sticker/natural/*.gif'
+    cwdhap = cwd+'/sticker/happy/*.gif'
+    for i,f in enumerate(glob.glob(cwdsad)):
+        stickers.append((f,1,))
+    for i,f in enumerate(glob.glob(cwdnat)):
+        stickers.append((f,2,))
+    for i,f in enumerate(glob.glob(cwdhap)):
+        stickers.append((f,3,))
+    c.executemany("""
+    INSERT INTO Gallery VALUES (?,?)
+    """, stickers)
+    conn.commit()
+    c.execute("""
+    DROP TABLE IF EXIST Items
+    """)
+    conn.commit()
+    t = [('Macaron',4,7,),
+    ('Ice Cream',5,10,),
+    ('Panini',15,40,),
+    ('Pizza',18,48,),
+    ('Hamburger',20,50)]
+    c.executemany("""
+    INSERT INTO Items VALUES (?,?,?)
+    """,t)
     conn.commit()
     c.close()
 
@@ -108,58 +129,48 @@ def check(account):
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
-    ex = c.execute(
-        """
+    ex = c.execute("""
         SELECT EXISTS(
         SELECT * FROM Users
         WHERE uid = ?)
-    """, t,
-    )
+    """, t)
     success = ex.fetchone()
     success = success[0]
     c.close()
     return bool(success)
 
-
-def register(account, pwd):
+def register(account,pwd):
     # Register a new account with password
     # Return a boolean value
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account, pwd)
-    c.execute(
-        """
+    c.execute("""
     INSERT INTO Users VALUES (?,?,0,0,0)
-    """, t,
-    )
+    """, t)
     t = (account,)
-    ex = c.execute(
-        """
+    ex = c.execute("""
             SELECT EXISTS(
                 SELECT * FROM Users
                 WHERE uid = ?
             )
-    """, t,
-    )
+    """, t)
     conn.commit()
     success = ex.fetchone()
     success = success[0]
     c.close()
     return bool(success)
 
-
-def login(account, pwd):
+def login(account,pwd):
     # Check if account and password match
     # Return a boolean value
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
-    c.execute(
-        """
+    c.execute("""
     SELECT password FROM Users
     WHERE uid = ?
-    """, t,
-    )
+    """, t)
     info = c.fetchone()
     c.close()
     if info is None:
@@ -170,19 +181,16 @@ def login(account, pwd):
     else:
         return False
 
-
 def load(account):
-    # Retrieve data from database,
+    # Retrieve data from database, 
     # return a list of [uid, money, energy, level]
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
-    c.execute(
-        """
+    c.execute("""
     SELECT uid, money, energy, level FROM Users
     WHERE uid = ?
-    """, t,
-    )
+    """, t)
     info = c.fetchone()
     c.close()
     result = []
@@ -190,30 +198,25 @@ def load(account):
         result.append(i)
     return result
 
-
-def save(account, money, energy, level):
+def save(account,money,energy,level):
     # save data to database, return whether success
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
-    t = (money, energy, level, account,)
-    c.execute(
-        """
+    t = (money,energy,level,account,)
+    c.execute("""
     UPDATE Users
     SET money = ?, energy = ?, level = ?
     WHERE uid = ?
-    """, t,
-    )
+    """, t)
     conn.commit()
-    c.execute(
-        """
+    c.execute("""
     SELECT money, energy, level FROM Users
     WHERE uid = ?
-    """, (account,),
-    )
+    """, (account,))
     ck = c.fetchone()
-    ckExpected = [money, energy, level]
+    ckExpected = [money,energy, level]
     c.close()
-    for i, j in zip(ck, ckExpected):
+    for i,j in zip(ck, ckExpected):
         if i != j:
             return False
     return True
@@ -221,24 +224,55 @@ def save(account, money, energy, level):
 
 def getApperance(level):
     # return a list of absolute paths of stickser available
+    if level>3:
+        tag = 3
+    else:
+        tag = level
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     result = []
-    c.execute("SELECT * FROM Gallery LIMIT ?", (level,))
+    c.execute("SELECT path FROM Gallery LIMIT 1 WHERE tag = ?",(level,tag))
     for i in c.fetchall():
         result.append(i[0])
     c.close()
     return result
 
+def getItems():
+    # return a list of dictionary {name: ,price: ,energy: }
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+    c.excuate("""
+    SELECT * FROM items
+    """)
+    result = []
+    for i in c.fetchall():
+        result.append({'name':i[0],'price':i[1],'energy':i[2]})
+    return result
+
+
+def record(account,start,end):
+    # record the login and logout time 
+    # add a new line to table records
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+    t = (account,start,end)
+    c.execute("""
+    Insert into records Values(?,?,?)
+    """,t)
+    conn.commit()
+    c.close()
+
 
 if __name__ == '__main__':
     initDB()
-    print(register("yty", "123456"))
+    print(register("yty","123456"))
     print(load("yty"))
-    save("yty", 100, 20, 2)
+    save("yty",100,20,2)
     print(load("yty"))
     print(check('yty'))
-    print(check('yt'))
+    print(check('yt'))  
     print(getApperance(3))
-    print(login('yty', '123456'))
-    print(login('yty', '123'))
+    print(login('yty','123456'))
+    print(login('yty','123'))
+    print(getItems())
+    
