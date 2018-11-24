@@ -19,17 +19,17 @@ class TestEventController(unittest.TestCase):
 
         self.controller = buddingControllerMocker(0)
 
-    def testOnSucessEvent(self):  # increase money
+    def testIncreaseMoney(self):  # increase money
         self.controller.money = 0
         self.controller.on_success_event()
         self.assertEqual(self.controller.money, 10)
 
-    def testOnFailEvent1(self):  # deduct money
+    def testDeductMoney(self):  # deduct money
         self.controller.money = 10
         self.controller.on_fail_event()
         self.assertEqual(self.controller.money, 0)
 
-    def testOnFailEvent2(self):  # money cannot below zero
+    def testMoneyBelowZero(self):  # money cannot below zero
         self.controller.money = 0
         self.controller.on_fail_event()
         self.assertEqual(self.controller.money, 0)
