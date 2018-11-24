@@ -25,4 +25,4 @@ script:
  - coverage report
  - coverage run testEventController.py
  - coverage report
- - pylint ../TYTS
+#  - pylint ../TYTS
