@@ -9,13 +9,15 @@ from PyQt5 import QtWidgets
 
 import buddingWidget
 import collectButton
-import eventController
+import buddingController
+
+
 # from PyQt5 import QtGui
 
 
 class BuddingMainWindow(object):
     def __init__(self, user):
-        self.controller = eventController.EventController(self, user)
+        self.controller = buddingController.BuddingController(self, user)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -105,7 +107,7 @@ class BuddingMainWindow(object):
         self.contentLayout.addItem(spacerItem1)
 
         # add budding widget
-        self.buddingWidget = buddingWidget.BuddingWidget(self.contentWidget)
+        self.buddingWidget = buddingWidget.BuddingWidget(self.contentWidget, self.controller)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed,
         )
@@ -202,7 +204,7 @@ class BuddingMainWindow(object):
         self.logoutButton.setText(_translate("MainWindow", "logout"))
 
     def makeConnection(self):
-        self.collectSmileButton.clicked.connect(self.controller.collectStart)
+        self.collectSmileButton.clicked.connect(self.controller.collect_start)
         pass
 
     def updateMoney(self, val):

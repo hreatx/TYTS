@@ -64,9 +64,9 @@ class BuddingEmotion:
             print(message)
             ratio = float(message[0]['faceAttributes']['emotion']['happiness'])
             if ratio > 0.1:
-                self.controller.onSuccessEvent()
+                self.controller.on_success_event()
             else:
-                self.controller.onFailEvent()
+                self.controller.on_fail_event()
         except:
             print("error occur, fail")
 

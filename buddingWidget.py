@@ -11,7 +11,7 @@ dir = os.path.dirname(os.path.abspath(__file__))
 
 class BuddingWidget(QWidget):
 
-    def __init__(self, parent):
+    def __init__(self, parent, controller):
         super(BuddingWidget, self).__init__(parent)
 
         self.currentMovieIndex = -1
@@ -22,6 +22,7 @@ class BuddingWidget(QWidget):
         self.showNextMovie()
         self.layout.addWidget(self.movieLabel)
         self.setLayout(self.layout)
+        self.controller = controller
 
     def mousePressEvent(self, event):
         print("pressed")
