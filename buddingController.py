@@ -1,17 +1,19 @@
 from PyQt5 import QtCore
 
-import abc
 import buddingEmotion
 import mydata as database
-import buddingTestObject
 
 
 # from PyQt5 import QtGui
 # from PyQt5 import QtWidgets
-class BuddingObserver(abc.ABC):
-    @abc.abstractmethod
+
+
+class BuddingTestObject:
     def on_level_update(self, level):
-        pass
+        print("BuddingTestObject level update!")
+
+    def on_logout(self, level):
+        print("BuddingTestObject on_log_out!")
 
 
 class BuddingController:
@@ -96,7 +98,7 @@ class BuddingController:
 if __name__ == '__main__':
     controller = BuddingController()
 
-    testObject = buddingTestObject.BuddingTestObject()
+    testObject = BuddingTestObject()
     controller.register_observer('a', testObject)
 
     controller.change_energy(200)

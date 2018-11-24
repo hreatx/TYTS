@@ -6,15 +6,15 @@ from PyQt5.QtWidgets import QHBoxLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
 
-from buddingController import BuddingObserver
-
 dir = os.path.dirname(os.path.abspath(__file__))
 
 
-class BuddingWidget(QWidget, BuddingObserver):
-
+class BuddingWidget(QWidget):
     def on_level_update(self, level):
         print('budding widget update')
+
+    def on_logout(self, level):
+        print('budding widget logout')
 
     def __init__(self, parent, controller):
         super(BuddingWidget, self).__init__(parent)
@@ -27,7 +27,6 @@ class BuddingWidget(QWidget, BuddingObserver):
         self.showNextMovie()
         self.layout.addWidget(self.movieLabel)
         self.setLayout(self.layout)
-
 
     def mousePressEvent(self, event):
         print("pressed")
