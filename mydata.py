@@ -116,7 +116,7 @@ def register(account,pwd):
     c = conn.cursor()
     t = (account, pwd)
     c.execute("""
-    INSERT INTO Users VALUES (?,?,0,0,0)
+    INSERT INTO Users VALUES (?,?,0,0,1)
     """, t)
     t = (account,)
     ex = c.execute("""
