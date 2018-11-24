@@ -14,6 +14,7 @@ data interface for Budding Pop
 import sqlite3
 import os
 import glob
+import datetime
 
 STICKERPATH = "sticker/"
 ICONPATH = "icon/"
@@ -42,8 +43,8 @@ def initDB():
 
         create table Records(
             uid text,
-            start text,
-            end text
+            start integer,
+            end integer
         );
 
         create table Items(
@@ -66,7 +67,7 @@ def initDB():
 
         create table Smiles(
             uid text,
-            time text
+            time integer
         )
         """)
     conn.commit()
@@ -260,6 +261,15 @@ def lastLogout(account):
     # return the time of last logout
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
+    t = (account,)
+    c.execute("""
+    SELECT MAX(end) FROM Records
+    WHERE uid = ?
+    """,t)
+    result = c.fetchone()[0]
+    result = datetime.datetime.fromtimestamp(result)
+    c.close()
+    return result
 
 def addSmile(account,time):
     # record the time of smiles
@@ -307,7 +317,7 @@ if __name__ == '__main__':
     print(login('yty','123456'))
     print(login('yty','123'))
     print(getItems())
-    record('yty','2018-11-22 12:00','2018-11-22 12:05')
-    print(addSmile('yty','2018-11-24'))
+    time = datetime.datetime.now()
+    print(addSmile('yty',int(time.timestamp())))
     print(getSmiles('yty'))
     
