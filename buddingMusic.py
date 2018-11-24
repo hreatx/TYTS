@@ -13,7 +13,7 @@ class BuddingVoice(QtWidgets.QPushButton):
         super(BuddingVoice, self).__init__(parent)
         # music button config.
         self.controller = controller
-        self.controller.register_observer("music_button", self.on_level_update)
+        self.controller.register_observer("music_button", self)
         self.clicked.connect(self.voice_clicked)
         self.musicon = 1
 
