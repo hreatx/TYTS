@@ -6,14 +6,19 @@ from PyQt5.QtWidgets import QHBoxLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
 
+from buddingController import BuddingObserver
+
 dir = os.path.dirname(os.path.abspath(__file__))
 
 
-class BuddingWidget(QWidget):
+class BuddingWidget(QWidget, BuddingObserver):
+
+    def on_level_update(self, level):
+        print('budding widget update')
 
     def __init__(self, parent, controller):
         super(BuddingWidget, self).__init__(parent)
-
+        self.controller = controller
         self.currentMovieIndex = -1
         self.totalMovieSize = 5
 
@@ -22,7 +27,7 @@ class BuddingWidget(QWidget):
         self.showNextMovie()
         self.layout.addWidget(self.movieLabel)
         self.setLayout(self.layout)
-        self.controller = controller
+
 
     def mousePressEvent(self, event):
         print("pressed")
