@@ -10,6 +10,7 @@ from PyQt5 import QtWidgets
 import buddingWidget
 import collectButton
 import buddingController
+import buddingMusic
 
 
 # from PyQt5 import QtGui
@@ -149,7 +150,8 @@ class BuddingMainWindow(object):
             QtWidgets.QSizePolicy.Minimum,
         )
         self.tailLayout.addItem(spacerItem3)
-        self.voiceButton = QtWidgets.QPushButton(self.tailWidget)
+        #self.voiceButton = QtWidgets.QPushButton(self.tailWidget)
+        self.voiceButton = buddingMusic.BuddingVoice(self.tailWidget, self.controller)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )
