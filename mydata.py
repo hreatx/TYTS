@@ -12,7 +12,6 @@ data interface for Budding Pop
 #from PyQt5 import QtGui
 #from pyQt5 import QtSql
 import sqlite3
-import os
 import glob
 import datetime
 
@@ -74,10 +73,9 @@ def initDB():
     c.close()
     c = conn.cursor()
     stickers = [] 
-    cwd = os.path.dirname(os.path.abspath(__file__))
-    cwdsad = cwd+'/sticker/sad/*.gif'
-    cwdnat = cwd+'/sticker/natural/*.gif'
-    cwdhap = cwd+'/sticker/happy/*.gif'
+    cwdsad = '../TYTS/sticker/sad/*.gif'
+    cwdnat = '../TYTS/sticker/natural/*.gif'
+    cwdhap = '../TYTS/sticker/happy/*.gif'
     for i,f in enumerate(glob.glob(cwdsad)):
         stickers.append((f,1,))
     for i,f in enumerate(glob.glob(cwdnat)):
@@ -267,7 +265,6 @@ def lastLogout(account):
     WHERE uid = ?
     """,t)
     result = c.fetchone()[0]
-    result = datetime.datetime.fromtimestamp(result)
     c.close()
     return result
 
