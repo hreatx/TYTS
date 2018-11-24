@@ -7,34 +7,7 @@ Created on Thu Oct 25 12:42:17 2018
 
 data interface for Budding Pop
 """
-"""
-Database Content:
-    Table Users:
-        uid         CHAR[10]
-        password    CHAR[20]
-        money       INTEGER
-        energy      INTEGER
-        level       INTEGER
-        PrimaryKey(uid)
-    
-    Table Items:
-        iid         INTEGE
-        iname       CHAR[20]
-        price       INTEGER
-        icon        CHAR[20]
-        PrimaryKey(iid)
-    
-    Table Purchase:
-        uid         CHAR[10]
-        iid         INTEGER
-        time        DATE
-        num         INTEGER
-        PrimaryKey(time)
-    
-    Table Gallery:
-        sid         INTEGER
-        path        CHAR[20]
-"""
+
 #from PyQt5 import QtCore
 #from PyQt5 import QtGui
 #from pyQt5 import QtSql
@@ -53,6 +26,7 @@ def initDB():
     c.executescript(
         """
         DROP TABLE IF EXISTS Users;
+        DROP TABLE IF EXISTS Records;
         DROP TABLE IF EXISTS Items;
         DROP TABLE IF EXISTS Purchase;
         DROP TABLE IF EXISTS Gallery;
@@ -69,12 +43,12 @@ def initDB():
             uid text,
             start text,
             end text
-        )
+        );
 
         create table Items(
             iname text,
             price integer,
-            energy integer,
+            energy integer
         );
 
         create table Purchase(
@@ -86,7 +60,7 @@ def initDB():
 
         create table Gallery(
             path text,
-            tag text
+            tag integer
         );
         """)
     conn.commit()
@@ -106,10 +80,6 @@ def initDB():
     c.executemany("""
     INSERT INTO Gallery VALUES (?,?)
     """, stickers)
-    conn.commit()
-    c.execute("""
-    DROP TABLE IF EXIST Items
-    """)
     conn.commit()
     t = [('Macaron',4,7,),
     ('Ice Cream',5,10,),
@@ -226,12 +196,18 @@ def getApperance(level):
     # return a list of absolute paths of stickser available
     if level>3:
         tag = 3
+        limit = 2*level
     else:
         tag = level
+        limit = 4
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     result = []
-    c.execute("SELECT path FROM Gallery LIMIT 1 WHERE tag = ?",(level,tag))
+    c.execute("""
+    SELECT path FROM Gallery 
+    WHERE tag = ?
+    LIMIT ?
+    """,(tag,limit))
     for i in c.fetchall():
         result.append(i[0])
     c.close()
@@ -241,7 +217,7 @@ def getItems():
     # return a list of dictionary {name: ,price: ,energy: }
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
-    c.excuate("""
+    c.execute("""
     SELECT * FROM items
     """)
     result = []
