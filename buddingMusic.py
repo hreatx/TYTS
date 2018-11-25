@@ -42,8 +42,7 @@ class BuddingVoice(QtWidgets.QPushButton):
             self.player.play()
         self.musicon = 1 - self.musicon
 
-    def on_level_update(self):
-        newlevel = self.controller.get_level()
+    def on_level_update(self, newlevel):
         #below is for test
         #newlevel = self.level + 1
         print("newlevel", newlevel, "oldlevel", self.level)

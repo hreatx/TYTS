@@ -84,21 +84,23 @@ class BuddingWindow(QtWidgets.QMainWindow):
     def __init__(self, user, parent=None):
         self.val = 0
         super(BuddingWindow, self).__init__(parent)
-        self.ui = BuddingMainWindow(user)
+        self.ui = BuddingMainWindow(user, self)
         self.other = None
-        self.ui.setupUi(self)
-        # self.ui.pushButton.clicked.connect(self.updateDirectMoney)
         self.user = None
         self.pwd = None
+
         self.ui.logoutButton.clicked.connect(self.logout_clicked)
 
     def logout_clicked(self):
         self.close()
         self.other.show()
 
+    def closeEvent(self, event):
+        self.ui.tryCloseStore()
+        event.accept()
+
 
 def start():
-
     if not os.path.exists('mydata.db'):
         mydata.initDB()
 

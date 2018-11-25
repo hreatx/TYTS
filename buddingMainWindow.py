@@ -9,6 +9,7 @@ from PyQt5 import QtWidgets
 
 import buddingWidget
 import collectButton
+import storeButton
 import buddingController
 import buddingMusic
 
@@ -16,9 +17,13 @@ import buddingMusic
 # from PyQt5 import QtGui
 
 
-class BuddingMainWindow(object):
-    def __init__(self, user):
+class BuddingMainWindow:
+    LEVEL_MAP = {1: 'Sad', 2: 'Neutral', 3: 'Happy'}
+
+    def __init__(self, user, MainWindow):
         self.controller = buddingController.BuddingController(self, user)
+        self.setupUi(MainWindow)
+        self.controller.update_state()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -145,12 +150,21 @@ class BuddingMainWindow(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.tailLayout = QtWidgets.QHBoxLayout()
         self.tailLayout.setObjectName("tailLayout")
-        spacerItem3 = QtWidgets.QSpacerItem(
-            40, 20, QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Minimum,
+
+        self.reportButton = QtWidgets.QPushButton(self.tailWidget)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )
-        self.tailLayout.addItem(spacerItem3)
-        #self.voiceButton = QtWidgets.QPushButton(self.tailWidget)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.reportButton.sizePolicy().hasHeightForWidth(),
+        )
+
+        self.reportButton.setSizePolicy(sizePolicy)
+        self.reportButton.setObjectName("reportButton")
+        self.tailLayout.addWidget(self.reportButton)
+
         self.voiceButton = buddingMusic.BuddingVoice(self.tailWidget, self.controller)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
@@ -163,7 +177,8 @@ class BuddingMainWindow(object):
         self.voiceButton.setSizePolicy(sizePolicy)
         self.voiceButton.setObjectName("voiceButton")
         self.tailLayout.addWidget(self.voiceButton)
-        self.storeButton = QtWidgets.QPushButton(self.tailWidget)
+        self.storeButton = storeButton.StoreButton(self.tailWidget, self.controller)
+
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )
@@ -172,6 +187,7 @@ class BuddingMainWindow(object):
         sizePolicy.setHeightForWidth(
             self.storeButton.sizePolicy().hasHeightForWidth(),
         )
+
         self.storeButton.setSizePolicy(sizePolicy)
         self.storeButton.setObjectName("storeButton")
         self.tailLayout.addWidget(self.storeButton)
@@ -201,17 +217,24 @@ class BuddingMainWindow(object):
         self.updateMoney(self.controller.money)
         self.energy.setText(_translate("MainWindow", "Energy"))
         self.level.setText(_translate("MainWindow", "Level"))
+        self.reportButton.setText(_translate("MainWindow", "report"))
         self.voiceButton.setText(_translate("MainWindow", "voice"))
         self.storeButton.setText(_translate("MainWindow", "store"))
         self.logoutButton.setText(_translate("MainWindow", "logout"))
 
     def makeConnection(self):
         self.collectSmileButton.clicked.connect(self.controller.collect_start)
-        pass
 
     def updateMoney(self, val):
-        print("update money", val)
         self.money.setText("$" + str(val))
+
+    def updateEnergyAndLevel(self, energy, level):
+        self.energy.setText("Energy: " + str(energy))
+        self.level.setText(self.numToLevel(level))
+
+    @classmethod
+    def numToLevel(cls, num):
+        return cls.LEVEL_MAP[num]
 
     def enableCollect(self):
         self.collectSmileButton.enable()
@@ -219,3 +242,6 @@ class BuddingMainWindow(object):
     def disableCollect(self, money):
         self.updateMoney(money)
         self.collectSmileButton.disable()
+
+    def tryCloseStore(self):
+        self.storeButton.tryClose()

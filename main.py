@@ -10,8 +10,7 @@ class BuddingMainWindow(QMainWindow):
     def __init__(self, parent=None):
         self.val = 0
         super(BuddingMainWindow, self).__init__(parent)
-        self.ui = buddingMainWindow.BuddingMainWindow("ddd")
-        self.ui.setupUi(self)
+        self.ui = buddingMainWindow.BuddingMainWindow("ddd", self)
         self.user = None
         self.pwd = None
 

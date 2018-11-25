@@ -20,6 +20,7 @@ class BuddingController:
     COLLECT_TIME = 3000
     PENDING_MONEY = 10
     ENERGY_MAX = 100
+    LEVEL_MAX = 3
 
     def __init__(self, ui=None, user=None):
         if ui is not None:
@@ -27,16 +28,23 @@ class BuddingController:
             self.emotion = buddingEmotion.BuddingEmotion(self)
             self.user = user
             print("current user is", self.user)
-            res = database.load(self.user)
-            print(res)
-            self.money = res[1]
-            self.energy = res[2]
-            self.level = res[3]
+            self.load_state()
         else:
             self.money = 0
             self.energy = 0
             self.level = 0
         self.observer_dict = {}
+
+    def load_state(self):
+        res = database.load(self.user)
+        self.money = res[1]
+        self.money = 500
+        self.energy = res[2]
+        self.level = res[3]
+
+    def update_state(self):
+        self.ui.updateMoney(self.money)
+        self.ui.updateEnergyAndLevel(self.energy, self.level)
 
     def collect_start(self):
         print("collect start")
@@ -63,18 +71,40 @@ class BuddingController:
     def set_item(self, money, energy):
         if money > self.money:
             return False
-        self.money -= money
-        self.change_energy(energy)
+        if self.add_energy(energy):
+            self.money -= money
+            self.update_state()
+            return True
+        else:
+            return False
 
-    def change_energy(self, value):
-        self.energy += value
-        self.state_handler()
+    def add_energy(self, value):
+        # reset
+        if value < 0:
+            self.energy = 0
+            if self.level > 0:
+                self.level = 0
+                self.notify_all()
+                return True
+        else:
+            self.energy += value
+            if self.level == self.LEVEL_MAX:
+                if self.energy <= self.ENERGY_MAX:
+                    return True
+                else:
+                    self.energy -= value
+                    return False
 
-    def state_handler(self):
-        # update
-        if self.energy >= self.ENERGY_MAX:
-            self.energy -= self.ENERGY_MAX
-            self.notify_all()
+            # upgrade
+            if self.energy >= self.ENERGY_MAX:
+                while self.energy >= self.ENERGY_MAX:
+                    self.energy -= self.ENERGY_MAX
+                    if self.level < self.LEVEL_MAX:
+                        self.level += 1
+                if self.level > self.LEVEL_MAX:
+                    self.level = self.LEVEL_MAX
+                self.notify_all()
+            return True
 
     def register_observer(self, name, observer):
         self.observer_dict[name] = observer
@@ -101,4 +131,4 @@ if __name__ == '__main__':
     testObject = BuddingTestObject()
     controller.register_observer('a', testObject)
 
-    controller.change_energy(200)
+    controller.add_energy(200)

@@ -13,12 +13,13 @@ dir = os.path.dirname(os.path.abspath(__file__))
 
 class BuddingWidget(QWidget):
     def on_level_update(self, level):
-        print('budding widget update')
+        self.showNextMovie()
 
     def on_logout(self, level):
         print('budding widget logout')
 
     def __init__(self, parent, controller):
+
         super(BuddingWidget, self).__init__(parent)
         self.controller = controller
         self.currentMovieIndex = -1
@@ -29,9 +30,9 @@ class BuddingWidget(QWidget):
         self.showNextMovie()
         self.layout.addWidget(self.movieLabel)
         self.setLayout(self.layout)
+        self.controller.register_observer("movie_button", self)
 
     def mousePressEvent(self, event):
-        print("pressed")
         self.showNextMovie()
 
     def showNextMovie(self):
@@ -41,7 +42,7 @@ class BuddingWidget(QWidget):
         movie.start()
 
     def mouseReleaseEvent(self, event):
-        print("released")
+        pass
 
     def getNextMovie(self):
         file_path_list = mydata.getApperance(self.controller.level)
