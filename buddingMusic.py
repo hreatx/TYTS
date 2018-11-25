@@ -46,8 +46,6 @@ class BuddingVoice(QtWidgets.QPushButton):
         newlevel = self.controller.get_level()
         #below is for test
         #newlevel = self.level + 1
-        if newlevel == 4:
-            newlevel = 1
         print("newlevel", newlevel, "oldlevel", self.level)
         self.player.pause()
         self.playlist.removeMedia(0)
