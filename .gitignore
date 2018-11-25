@@ -1,3 +1,5 @@
 **/.DS_Store
 **/.idea
-**/mydata.db
+mydata.db
+stickers/.DS_Store
+__pycache__/
