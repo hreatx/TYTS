@@ -92,6 +92,7 @@ class BuddingWindow(QtWidgets.QMainWindow):
         self.ui.logoutButton.clicked.connect(self.logout_clicked)
 
     def logout_clicked(self):
+        self.ui.voiceButton.on_logout()
         self.close()
         self.other.show()
 
