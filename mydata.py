@@ -69,6 +69,11 @@ def initDB():
             time integer
         )
         """)
+    admin = ('admin','admin',500,0,1,)
+    c.execute(
+        """
+        INSERT INTO Users VALUES (?,?,?,?,?)
+        """,admin)
     conn.commit()
     c.close()
     c = conn.cursor()
@@ -121,7 +126,7 @@ def register(account,pwd):
     c = conn.cursor()
     t = (account, pwd)
     c.execute("""
-    INSERT INTO Users VALUES (?,?,0,0,1)
+    INSERT INTO Users VALUES (?,?,38,0,1)
     """, t)
     t = (account,)
     ex = c.execute("""
