@@ -1,5 +1,6 @@
 import unittest
 
+
 class BuddingStoreMock(object):
     COLLECT_TIME = 3000
     PENDING_MONEY = 10
@@ -9,7 +10,6 @@ class BuddingStoreMock(object):
     def __init__(self):
         self.totalMovieSize = 0
         self.currentMovieIndex = 0
-        self.mock_cash = 0
         self.money = 0
         self.energy = 0
         self.level = 0
@@ -41,6 +41,16 @@ class BuddingStoreMock(object):
                     self.level = self.LEVEL_MAX
                 # self.notify_all()
             return True
+
+    def set_item(self, money, energy):
+        if money > self.money:
+            return False
+        if self.add_energy(energy):
+            self.money -= money
+            # self.update_state()
+            return True
+        else:
+            return False
 
 
 class TestBuddingBudding(unittest.TestCase):
@@ -87,6 +97,26 @@ class TestBuddingBudding(unittest.TestCase):
         self.widget.add_energy(200)
         self.assertEqual(self.widget.level, 2)
 
+
+    # test affordable purchase
+    def test_purchase(self):
+        self.widget.energy = 0
+        self.widget.level = 0
+        self.widget.money = 500
+
+        self.widget.set_item(money=50, energy=0)
+
+        self.assertEqual(self.widget.money, 450)
+
+    # test unaffordable purchase
+    def test_purchase(self):
+        self.widget.energy = 0
+        self.widget.level = 0
+        self.widget.money = 20
+
+        self.assertFalse(self.widget.set_item(money=50, energy=0))
+
+        self.assertEqual(self.widget.money, 20)
 
 if __name__ == "__main__":
     unittest.main()
