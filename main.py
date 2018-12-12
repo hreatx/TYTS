@@ -111,10 +111,6 @@ def start():
     application.show()
     sys.exit(app.exec_())
 
-    # mainWindow = BuddingMainWindow()
-    # mainWindow.show()
-    # # mainWindow.setWindowIcon(QtGui.QIcon('budding_icon.jpeg'))
-
 
 if __name__ == "__main__":
     start()
