@@ -277,7 +277,6 @@ def totalTime(account):
     SELECT start, end FROM Records
     WHERE uid = ?
     """,t)
-    result = c.fetchall()
     sumtime = 0
     for f in c.fetchall():
         sumtime = sumtime + f[1] - f[0]
