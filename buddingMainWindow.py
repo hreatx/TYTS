@@ -7,6 +7,7 @@
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 
+import buddingReport
 import buddingWidget
 import collectButton
 import storeButton
@@ -21,7 +22,8 @@ class BuddingMainWindow:
     LEVEL_MAP = {1: 'Sad', 2: 'Neutral', 3: 'Happy'}
 
     def __init__(self, user, MainWindow):
-        self.controller = buddingController.BuddingController(self, user)
+        self.user = user
+        self.controller = buddingController.BuddingController(self, user, MainWindow)
         self.setupUi(MainWindow)
         self.controller.update_state()
 
@@ -151,7 +153,7 @@ class BuddingMainWindow:
         self.tailLayout = QtWidgets.QHBoxLayout()
         self.tailLayout.setObjectName("tailLayout")
 
-        self.reportButton = QtWidgets.QPushButton(self.tailWidget)
+        self.reportButton = buddingReport.ReportButton(self.tailWidget, self.user)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )
@@ -214,7 +216,7 @@ class BuddingMainWindow:
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Smile Budding!"))
-        self.updateMoney(self.controller.money)
+        self.updateMoney(self.controller.get_money())
         self.energy.setText(_translate("MainWindow", "Energy"))
         self.level.setText(_translate("MainWindow", "Level"))
         self.reportButton.setText(_translate("MainWindow", "report"))

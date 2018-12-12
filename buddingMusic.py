@@ -68,6 +68,6 @@ class BuddingVoice(QtWidgets.QPushButton):
             mystr = self.music_path("happy.mp3")
         return QUrl.fromLocalFile(mystr)
 
-    def on_logout(self, level):
+    def on_logout(self):
         self.musicon = 0
         self.player.stop()
