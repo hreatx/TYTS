@@ -72,6 +72,8 @@ class BuddingPlayer:
         if user is not None:
             self.last_logout_time = database.lastLogout(user)
             print("current user is", self.user, "last logout time is", self.last_logout_time)
+            if self.last_logout_time is None:
+                self.last_logout_time = -1
 
         self.money = money
         self.login_time = int(time.time())
@@ -95,9 +97,10 @@ class BuddingPlayer:
             self.money = 0
 
     def timeout(self):
+        if self.last_logout_time < 0:
+            return 0
         timeout = self.login_time - self.last_logout_time
         print("timeout", timeout, "detected!")
-
         return timeout
 
     # for logout
