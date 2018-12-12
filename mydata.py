@@ -5,7 +5,7 @@ Created on Thu Oct 25 12:42:17 2018
 
 @author: yty from TYTS
 
-data interface for Budding Pop
+database interface for Budding Pop
 """
 
 #from PyQt5 import QtCore
@@ -268,6 +268,21 @@ def lastLogout(account):
     c.close()
     return result
 
+def totalTime(account):
+    # return the total online time of a user
+    conn = sqlite3.connect('mydata.db')
+    c = conn.cursor()
+    t = (account,)
+    c.execute("""
+    SELECT start, end FROM Records
+    WHERE uid = ?
+    """,t)
+    result = c.fetchall()
+    sumtime = 0
+    for f in c.fetchall():
+        sumtime = sumtime + f[1] - f[0]
+    return sumtime
+
 def addSmile(account,time):
     # record the time of smiles
     conn = sqlite3.connect('mydata.db')
@@ -304,7 +319,7 @@ def getSmiles(account):
 
 if __name__ == '__main__':
     initDB()
-    print(register("yty","123456"))
+    print(register("yty","123"))
     print(load("yty"))
     save("yty",100,20,2)
     print(load("yty"))
@@ -316,4 +331,5 @@ if __name__ == '__main__':
     print(getItems())
     time = datetime.datetime.now()
     print(addSmile('yty',int(time.timestamp())))
-    print(getSmiles('yty'))  
+    print(getSmiles('yty'))
+    print(totalTime('yty'))
