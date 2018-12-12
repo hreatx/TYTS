@@ -232,7 +232,7 @@ def getItems():
 
 
 def record(account,start,end):
-    # record the login and logout time 
+    # record the login and logout time, in form of long integer
     # add a new line to table records
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
@@ -316,5 +316,4 @@ if __name__ == '__main__':
     print(getItems())
     time = datetime.datetime.now()
     print(addSmile('yty',int(time.timestamp())))
-    print(getSmiles('yty'))
-    
+    print(getSmiles('yty'))  
