@@ -153,7 +153,7 @@ class BuddingMainWindow:
         self.tailLayout = QtWidgets.QHBoxLayout()
         self.tailLayout.setObjectName("tailLayout")
 
-        self.reportButton = buddingReport.ReportButton(self.tailWidget, self.user)
+        self.reportButton = buddingReport.ReportButton(self.tailWidget, self.controller)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )

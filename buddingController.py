@@ -109,6 +109,9 @@ class BuddingPlayer:
         print("save login", self.login_time, " logout", logout_time)
         database.record(self.user, self.login_time, logout_time)
 
+    def get_login_time(self):
+        return self.login_time
+
 
 class BuddingController:
     COLLECT_TIME = 3000
@@ -129,8 +132,6 @@ class BuddingController:
 
         timeout = self.player.timeout()
 
-        if timeout == 0:
-            self.player.set_money(100)
         if timeout > self.LOGIN_TIMEOUT:
             message = "Long time no play (" + str(timeout) + " seconds), reset all!"
             QtWidgets.QMessageBox.information(self.main_window, "info", message)
