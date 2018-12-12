@@ -11,7 +11,7 @@ class buddingControllerMocker(BuddingController):
     """
 
     def __init__(self, money):
-        self.player = buddingController.BuddingPlayer(money)
+        self.money = money
 
 
 class TestEventController(unittest.TestCase):
