@@ -22,6 +22,7 @@ class BuddingMainWindow:
     LEVEL_MAP = {1: 'Sad', 2: 'Neutral', 3: 'Happy'}
 
     def __init__(self, user, MainWindow):
+        self.user = user
         self.controller = buddingController.BuddingController(self, user, MainWindow)
         self.setupUi(MainWindow)
         self.controller.update_state()
@@ -152,7 +153,7 @@ class BuddingMainWindow:
         self.tailLayout = QtWidgets.QHBoxLayout()
         self.tailLayout.setObjectName("tailLayout")
 
-        self.reportButton = buddingReport.ReportButton(self.tailWidget)
+        self.reportButton = buddingReport.ReportButton(self.tailWidget, self.user)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )
