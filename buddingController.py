@@ -72,6 +72,8 @@ class BuddingPlayer:
         if user is not None:
             self.last_logout_time = database.lastLogout(user)
             print("current user is", self.user, "last logout time is", self.last_logout_time)
+            if self.last_logout_time is None:
+                self.last_logout_time = -1
 
         self.money = money
         self.login_time = int(time.time())
@@ -95,9 +97,10 @@ class BuddingPlayer:
             self.money = 0
 
     def timeout(self):
+        if self.last_logout_time < 0:
+            return 0
         timeout = self.login_time - self.last_logout_time
         print("timeout", timeout, "detected!")
-
         return timeout
 
     # for logout
@@ -125,6 +128,9 @@ class BuddingController:
         # set level to zero
 
         timeout = self.player.timeout()
+
+        if timeout == 0:
+            self.player.set_money(100)
         if timeout > self.LOGIN_TIMEOUT:
             message = "Long time no play (" + str(timeout) + " seconds), reset all!"
             QtWidgets.QMessageBox.information(self.main_window, "info", message)
@@ -136,7 +142,6 @@ class BuddingController:
     def load_state(self, user):
         res = database.load(user)
         self.player.set_money(money=res[1])
-        self.player.set_money(money=500)
         self.budding.set_energy_and_level(energy=res[2], level=res[3])
 
     def update_state(self):

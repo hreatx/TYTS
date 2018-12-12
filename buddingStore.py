@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class BuddingStore:
     def __init__(self, storeWindow, itemList, controller):
+        self.window = storeWindow
         self.controller = controller
         self.itemDict = {}
         self.buttons = {}
@@ -56,4 +57,6 @@ class BuddingStore:
 
     def tryToBuy(self, item):
         print(item)
-        self.controller.set_item(item['price'], item['energy'])
+        if not self.controller.set_item(item['price'], item['energy']):
+            QtWidgets.QMessageBox.critical(self.window, "error", "not enough money")
+
