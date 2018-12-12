@@ -8,9 +8,6 @@ Created on Thu Oct 25 12:42:17 2018
 database interface for Budding Pop
 """
 
-#from PyQt5 import QtCore
-#from PyQt5 import QtGui
-#from pyQt5 import QtSql
 import sqlite3
 import glob
 import datetime
