@@ -23,17 +23,17 @@ class TestEventController(unittest.TestCase):
     def testIncreaseMoney(self):  # increase money, equivalent class A
         self.controller.player.set_money(0)
         self.controller.on_success_event()
-        self.assertEqual(self.controller.player.get_money(), 10)
+        self.assertEqual(self.controller.get_money(), 10)
 
     def testDeductMoney(self):  # deduct money, equivalent class A
         self.controller.player.set_money(10)
         self.controller.on_fail_event()
-        self.assertEqual(self.controller.player.get_money(), 0)
+        self.assertEqual(self.controller.get_money(), 0)
 
     def testMoneyBelowZero(self):  # money cannot below zero, equivalent class B
         self.controller.player.set_money(10)
         self.controller.on_fail_event()
-        self.assertEqual(self.controller.player.get_money(), 0)
+        self.assertEqual(self.controller.get_money(), 0)
 
 
 if __name__ == "__main__":
