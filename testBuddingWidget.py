@@ -31,7 +31,6 @@ class TestBuddingWidget(unittest.TestCase):
         self.widget.totalMovieSize = 6
         self.widget.currentMovieIndex = 0
 
-
         self.widget.getNextMovie()
 
         print(self.widget.currentMovieIndex)
