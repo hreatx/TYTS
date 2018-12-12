@@ -128,6 +128,9 @@ class BuddingController:
         # set level to zero
 
         timeout = self.player.timeout()
+
+        if timeout == 0:
+            self.player.set_money(100)
         if timeout > self.LOGIN_TIMEOUT:
             message = "Long time no play (" + str(timeout) + " seconds), reset all!"
             QtWidgets.QMessageBox.information(self.main_window, "info", message)
@@ -139,7 +142,6 @@ class BuddingController:
     def load_state(self, user):
         res = database.load(user)
         self.player.set_money(money=res[1])
-        self.player.set_money(money=500)
         self.budding.set_energy_and_level(energy=res[2], level=res[3])
 
     def update_state(self):
