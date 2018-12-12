@@ -24,7 +24,7 @@ class BuddingReport:
     def save_to_pdf(self):
         user = self.controller.player.user
         login_time = self.controller.player.get_login_time()
-        filename = "player_report/report_" + str(user) + "_" + str(int(time.time())) + ".pdf"
+        filename = "report_" + str(user) + "_" + str(int(time.time())) + ".pdf"
         printer = QPrinter()
 
         printer.setOutputFormat(QPrinter.PdfFormat)
