@@ -37,3 +37,6 @@ We use pyinstaller (https://www.pyinstaller.org/) to build the software.
 The build is automatically done by Travis CI. 
 See following file about the build setting
 TYTS/.pre-commit-config.yaml
+
+## Full Version Report & Operating Guide
+Please check [FINAL PART ONE](https://github.com/hreatx/TYTS/blob/master/allReports/FINAL_PART_ONE.pdf)
