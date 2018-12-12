@@ -158,7 +158,7 @@ def login(account,pwd):
 
 def load(account):
     # Retrieve data from database, 
-    # return a list of [uid, money, energy, level]
+    # return a list of [uid, money, energy, level] (list)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
@@ -174,7 +174,7 @@ def load(account):
     return result
 
 def save(account,money,energy,level):
-    # save data to database, return whether success
+    # save data to database, return whether success (boolean)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (money,energy,level,account,)
@@ -198,7 +198,7 @@ def save(account,money,energy,level):
 
 
 def getApperance(level):
-    # return a list of absolute paths of stickser available
+    # return a list of absolute paths of stickser available (list)
     if level>3:
         tag = 3
         limit = 2*level
@@ -219,7 +219,7 @@ def getApperance(level):
     return result
 
 def getItems():
-    # return a list of dictionary {name: ,price: ,energy: }
+    # return a list of dictionary {name: ,price: ,energy: } (dictionary)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     c.execute("""
@@ -232,7 +232,7 @@ def getItems():
 
 
 def record(account,start,end):
-    # record the login and logout time, in form of long integer
+    # record the login and logout time, in form of long integer (boolean)
     # add a new line to table records
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
@@ -256,7 +256,7 @@ def record(account,start,end):
 
 
 def lastLogout(account):
-    # return the time of last logout
+    # return the time of last logout (long int)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
@@ -269,7 +269,8 @@ def lastLogout(account):
     return result
 
 def totalTime(account):
-    # return the total online time of a user
+    # return the total online time of a user (int)
+    # in form of second
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
@@ -283,7 +284,7 @@ def totalTime(account):
     return sumtime
 
 def addSmile(account,time):
-    # record the time of smiles
+    # record the time of smiles (boolean)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,time,)
@@ -304,7 +305,7 @@ def addSmile(account,time):
     return bool(success)
  
 def getSmiles(account):
-    # return a list of records of smiles
+    # return the number of records of smiles (int)
     conn = sqlite3.connect('mydata.db')
     c = conn.cursor()
     t = (account,)
