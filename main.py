@@ -29,11 +29,11 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             )
             return
 
-        QtWidgets.QMessageBox.information(
-            self, "warining", "username: %s\npassword: %s\n" % (
-                self.user, self.pwd,
-            ),
-        )
+        # QtWidgets.QMessageBox.information(
+        #     self, "warining", "username: %s\npassword: %s\n" % (
+        #         self.user, self.pwd,
+        #     ),
+        # )
         self.change_clicked()
 
     def reg_clicked(self):
@@ -92,12 +92,13 @@ class BuddingWindow(QtWidgets.QMainWindow):
         self.ui.logoutButton.clicked.connect(self.logout_clicked)
 
     def logout_clicked(self):
-        self.ui.voiceButton.on_logout()
         self.close()
         self.other.show()
 
     def closeEvent(self, event):
         self.ui.tryCloseStore()
+        self.ui.controller.player.save_state()
+        self.ui.voiceButton.on_logout()
         event.accept()
 
 

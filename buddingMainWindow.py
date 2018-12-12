@@ -7,6 +7,7 @@
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 
+import buddingReport
 import buddingWidget
 import collectButton
 import storeButton
@@ -21,7 +22,7 @@ class BuddingMainWindow:
     LEVEL_MAP = {1: 'Sad', 2: 'Neutral', 3: 'Happy'}
 
     def __init__(self, user, MainWindow):
-        self.controller = buddingController.BuddingController(self, user)
+        self.controller = buddingController.BuddingController(self, user, MainWindow)
         self.setupUi(MainWindow)
         self.controller.update_state()
 
@@ -151,7 +152,7 @@ class BuddingMainWindow:
         self.tailLayout = QtWidgets.QHBoxLayout()
         self.tailLayout.setObjectName("tailLayout")
 
-        self.reportButton = QtWidgets.QPushButton(self.tailWidget)
+        self.reportButton = buddingReport.ReportButton(self.tailWidget)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed,
         )

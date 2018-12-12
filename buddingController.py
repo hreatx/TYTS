@@ -1,7 +1,8 @@
-from PyQt5 import QtCore
+from PyQt5 import QtCore, QtWidgets
 
 import buddingEmotion
 import mydata as database
+import time
 
 
 # from PyQt5 import QtGui
@@ -36,8 +37,9 @@ class BuddingCharacter:
         if value < 0:
             self.energy = 0
             if self.level > 0:
-                self.level = 0
-                subject.notify_all()
+                self.level = 1
+                if subject is not None:
+                    subject.notify_all()
                 return True
         else:
             self.energy += value
@@ -56,7 +58,8 @@ class BuddingCharacter:
                         self.level += 1
                 if self.level > self.LEVEL_MAX:
                     self.level = self.LEVEL_MAX
-                subject.notify_all()
+                if subject is not None:
+                    subject.notify_all()
             return True
 
 
@@ -65,8 +68,13 @@ class BuddingPlayer:
 
     def __init__(self, user=None, money=0):
         self.user = user
-        print("current user is", self.user)
+        self.last_logout_time = -1
+        if user is not None:
+            self.last_logout_time = database.lastLogout(user)
+            print("current user is", self.user, "last logout time is", self.last_logout_time)
+
         self.money = money
+        self.login_time = int(time.time())
 
     def get_user(self):
         return self.user
@@ -86,11 +94,25 @@ class BuddingPlayer:
         else:
             self.money = 0
 
+    def timeout(self):
+        timeout = self.login_time - self.last_logout_time
+        print("timeout", timeout, "detected!")
+
+        return timeout
+
+    # for logout
+    def save_state(self):
+        logout_time = int(time.time())
+        print("save login", self.login_time, " logout", logout_time)
+        database.record(self.user, self.login_time, logout_time)
+
 
 class BuddingController:
     COLLECT_TIME = 3000
+    LOGIN_TIMEOUT = 100
 
-    def __init__(self, ui=None, user=None):
+    def __init__(self, ui=None, user=None, main_window=None):
+        self.main_window = main_window
         self.budding = BuddingCharacter()
         self.player = BuddingPlayer(user)
 
@@ -98,7 +120,18 @@ class BuddingController:
             self.ui = ui
             self.emotion = buddingEmotion.BuddingEmotion(self)
             self.load_state(user)
+
         self.observer_dict = {}
+        # set level to zero
+
+        timeout = self.player.timeout()
+        if timeout > self.LOGIN_TIMEOUT:
+            message = "Long time no play (" + str(timeout) + " seconds), reset all!"
+            QtWidgets.QMessageBox.information(self.main_window, "info", message)
+            self.budding.add_energy(-1, None)
+        else:
+            message = str(timeout) + " seconds since last play!"
+            QtWidgets.QMessageBox.information(self.main_window, "info", message)
 
     def load_state(self, user):
         res = database.load(user)
@@ -167,6 +200,7 @@ class BuddingController:
         return money
 
 
+# for test
 if __name__ == '__main__':
     controller = BuddingController()
 
