@@ -2,7 +2,7 @@ import copy
 import os
 import sys
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 
 import mydata
 from buddingMainWindow import BuddingMainWindow
@@ -106,9 +106,14 @@ def start():
         mydata.initDB()
 
     app = QtWidgets.QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon('budding_icon.jpeg'))
     application = ApplicationWindow()
     application.show()
     sys.exit(app.exec_())
+
+    # mainWindow = BuddingMainWindow()
+    # mainWindow.show()
+    # # mainWindow.setWindowIcon(QtGui.QIcon('budding_icon.jpeg'))
 
 
 if __name__ == "__main__":
