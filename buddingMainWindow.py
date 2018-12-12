@@ -214,7 +214,7 @@ class BuddingMainWindow:
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Smile Budding!"))
-        self.updateMoney(self.controller.money)
+        self.updateMoney(self.controller.get_money())
         self.energy.setText(_translate("MainWindow", "Energy"))
         self.level.setText(_translate("MainWindow", "Level"))
         self.reportButton.setText(_translate("MainWindow", "report"))
