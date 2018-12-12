@@ -76,8 +76,8 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.reg.clicked.connect(self.reg_clicked)
         self.ui.login.clicked.connect(self.login_clicked)
-        self.ui.test.clicked.connect(self.test_clicked)
-        self.ui.change.clicked.connect(self.change_clicked)
+        #self.ui.test.clicked.connect(self.test_clicked)
+        #self.ui.change.clicked.connect(self.change_clicked)
 
 
 class BuddingWindow(QtWidgets.QMainWindow):
