@@ -64,7 +64,7 @@ class BuddingEmotion:
 
     def processResult(self, message):
         try:
-            print(message)
+            print(json.dumps(message, indent=2))
             ratio = float(message[0]['faceAttributes']['emotion']['happiness'])
             if ratio > 0.1:
                 self.controller.on_success_event()

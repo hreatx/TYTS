@@ -45,7 +45,7 @@ class BuddingWidget(QWidget):
         pass
 
     def getNextMovie(self):
-        file_path_list = mydata.getApperance(self.controller.level)
+        file_path_list = mydata.getApperance(self.controller.get_level())
         filename = file_path_list[self.currentMovieIndex % len(file_path_list)]
         self.currentMovieIndex += 1
 

@@ -16,13 +16,14 @@ class StoreWindow(QMainWindow):
 
 
 class StoreButton(QPushButton):
-    def __init__(self, Text, controller, parent=None):
-        super(StoreButton, self).__init__()
+    def __init__(self, parent, controller):
+        super(StoreButton, self).__init__(parent)
         self.window = StoreWindow(self.reverseState)
         self.store = buddingStore.BuddingStore(self.window, database.getItems(), controller)
         self.storeState = 0
+        self.clicked.connect(self.on_click)
 
-    def mousePressEvent(self, QMouseEvent):
+    def on_click(self):
         if self.storeState == 0:
             self.window.show()
         else:
