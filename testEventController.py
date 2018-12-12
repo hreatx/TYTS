@@ -13,6 +13,16 @@ class buddingControllerMocker(BuddingController):
     def __init__(self, money):
         self.money = money
 
+    # mock the increase and decrease method from Player class directly here. This avoid calling the database.
+    def increase_money(self, trans):
+        self.money += trans
+
+    def decrease_money(self, trans):
+        if self.money >= trans:
+            self.money -= trans
+        else:
+            self.money = 0
+
 
 class TestEventController(unittest.TestCase):
 
@@ -21,19 +31,16 @@ class TestEventController(unittest.TestCase):
         self.controller = buddingControllerMocker(0)
 
     def testIncreaseMoney(self):  # increase money, equivalent class A
-        self.controller.player.set_money(0)
-        self.controller.on_success_event()
-        self.assertEqual(self.controller.get_money(), 10)
+        self.controller.increase_money(10)
+        self.assertEqual(self.controller.money, 10)
 
     def testDeductMoney(self):  # deduct money, equivalent class A
-        self.controller.player.set_money(10)
-        self.controller.on_fail_event()
-        self.assertEqual(self.controller.get_money(), 0)
+        self.controller.decrease_money(10)
+        self.assertEqual(self.controller.money, 0)
 
     def testMoneyBelowZero(self):  # money cannot below zero, equivalent class B
-        self.controller.player.set_money(10)
-        self.controller.on_fail_event()
-        self.assertEqual(self.controller.get_money(), 0)
+        self.controller.decrease_money(10)
+        self.assertEqual(self.controller.money, 0)
 
 
 if __name__ == "__main__":
