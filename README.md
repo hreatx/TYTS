@@ -1,20 +1,40 @@
 # TYTS
 This is a course project for our team (Too young Too simple)(Sometimes Naive)!
 
-TODO LIST for iteration 2
-- [x] Two more remain user stories
-  - [x] music play
-  - [x] budding store with energy
-- [ ] ~~A new user story on report~~ -> to final iteration
-- [ ] ~~Complete documentations~~ -> to final iteration
-- [ ] ~~Create an online database using AWS~~ -> not necessary
-- [ ] ~~More user-friendly UI~~ -> to final iteration
-- [x] We will add three levels instead of one Sad, Neutral, Happy
-- [x] More pictures
+Team ID
+Too_Young_Too_Simple
 
-TODO LIST for final iteration
-- [ ] A new user story on report
-- [ ] add all reports to repository (create a folder and submit everything)
-- [ ] Complete readme.md
-- [ ] Clean and user-friendly ui
-- [ ] final report and two demos (final demo for 5 minutes)! 
+Team Member
+Tianyang Yang (ty2388)
+Xi Lin (xl2793) 
+Ruolin Jia (rj2537)
+Lixing Zhang (lz2636)
+Benhao Chen(bc2801)
+
+Github Repo
+https://github.com/hreatx/TYTS
+
+## Dependency
+python3.6 or above, PyQt5, openCV, requests, pyinstaller, setuptools, pylint, coverage
+
+## Dependency Installation Commands
+pip3 install pyqt5
+pip3 install opencv-python
+pip3 install requests
+pip3 install pyinstaller
+pip3 install --upgrade setuptools
+pip3 install pylint
+pip3 install coverage
+
+## Starting the Game
+```
+git clone https://github.com/hreatx/TYTS.git
+cd TYTS
+./beginGame.sh 
+```
+
+## Alternative Way to Build the Software 
+We use pyinstaller (https://www.pyinstaller.org/) to build the software.
+The build is automatically done by Travis CI. 
+See following file about the build setting
+TYTS/.pre-commit-config.yaml
