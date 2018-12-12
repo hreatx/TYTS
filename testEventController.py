@@ -6,7 +6,7 @@ from buddingController import BuddingController
 
 class buddingControllerMocker(BuddingController):
     """
-    Interit the EventController in order to mock it without calling the database.
+    Inherit the EventController in order to mock it without calling the database.
     Inspired by: https://stackoverflow.com/questions/17836939/mocking-init-for-unittesting
     """
 
